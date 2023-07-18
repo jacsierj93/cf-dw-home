@@ -18,7 +18,7 @@ const C1HomeDesktopRowcrucero: React.FC<C1HomeDesktopRowcruceroProps> = (
 ) => {
   return (
     <>
-      <div className={props.className}>
+      <div className={props.className} style={{width:"100%",maxWidth:"1387px"}}>
         <div className="flex flex-col items-center justify-start rounded-[10px] w-[49%] md:w-full">
           <Img
             className="h-[264px] md:h-auto object-cover rounded-[10px] w-full"

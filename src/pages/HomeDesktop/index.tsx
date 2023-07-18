@@ -416,7 +416,7 @@ const HomeDesktopPage: React.FC = () => {
                     </div>
                   </div>
                   <Text
-                    className="absolute h-max inset-[0] justify-center leading-[150.00px] m-auto md:text-5xl text-[150px] text-white-A700"
+                    className="flex absolute h-max inset-[0] justify-center leading-[150.00px] m-auto md:text-5xl text-[150px] text-white-A700"
                     size="txtTankerRegular150"
                   >
                     <>
