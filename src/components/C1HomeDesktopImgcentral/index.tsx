@@ -30,9 +30,9 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
             {props?.description}
           </Text>
         </div>
-        <Button className="bg-lime-A700 cursor-pointer font-clashdisplayvariable font-semibold py-3.5 rounded-lg text-base text-black-900 text-center w-[196px]">
+        {/* <Button className="mt-8 bg-lime-A700 cursor-pointer font-clashdisplayvariable font-semibold py-3.5 rounded-lg text-base text-black-900 text-center w-[196px]">
           {props?.buttontext}
-        </Button>
+        </Button> */}
       </div>
     </>
   );

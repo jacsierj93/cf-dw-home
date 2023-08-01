@@ -3,3 +3,8 @@
  @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/InterSemiBold.ttf"); font-family : "Inter"; font-weight : 600;  }
  @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/Tanker-Regular.ttf"); font-family : "Tanker"; font-weight : 400;  }
  @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/ClashGrotesk-Variable.ttf"); font-family : "Clash Grotesk Variable"; }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/MontserratSemiBold.ttf"); font-family : "Montserrat"; font-weight : 600;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/MontserratMedium.ttf"); font-family : "Montserrat"; font-weight : 500;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/MontserratBold.ttf"); font-family : "Montserrat"; font-weight : 700;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/MontserratRegular.ttf"); font-family : "Montserrat"; font-weight : 400;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/InterMedium.ttf"); font-family : "Inter"; font-weight : 500;  }

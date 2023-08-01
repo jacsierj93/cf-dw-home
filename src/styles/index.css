@@ -1,10 +1,14 @@
 * {
   box-sizing: border-box;
 }
+html{
+  height: 100%;
+}
 body {
   font-family: "Roboto", sans-serif !important;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 .dhiwise-code,
 .dhiwise-navigation {

@@ -107,7 +107,7 @@ module.exports = {
       backgroundImage: {
         gradient: "linear-gradient(180deg ,#fc2f00,#fc2f0000)",
         gradient1: "linear-gradient(180deg ,#ffffffbf,#ffffffbf)",
-        gradient2: "linear-gradient(180deg ,#9381ff,#fc2f003f)",
+        gradient2: "linear-gradient(180deg ,#9381FF,rgba(252, 47, 0, 0.25) 100%)",
         gradient3: "linear-gradient(180deg ,#111111,#9381ff3f)",
         gradient4: "linear-gradient(180deg ,#fc2f007f,#fc2f0000)",
       },

@@ -11,6 +11,7 @@ type C1HomeDesktopRowsubheadingProps = Omit<
     headingOne: JSX.Element | string;
     descriptionTwo: string;
     reservarAhoraTwo: string;
+    imgUrl:string;
   }>;
 
 const C1HomeDesktopRowsubheading: React.FC<C1HomeDesktopRowsubheadingProps> = (
@@ -39,14 +40,14 @@ const C1HomeDesktopRowsubheading: React.FC<C1HomeDesktopRowsubheadingProps> = (
               </Text>
             </div>
           </div>
-          <Button className="bg-indigo-A100 cursor-pointer font-clashdisplayvariable font-medium py-3.5 rounded-lg text-base text-center text-white-A700 w-[196px]">
+          {/* <Button className="bg-indigo-A100 cursor-pointer font-clashdisplayvariable font-medium py-3.5 rounded-lg text-base text-center text-white-A700 w-[196px]">
             {props?.reservarAhoraTwo}
-          </Button>
+          </Button> */}
         </div>
         <div className="flex flex-col items-center justify-start rounded-[10px] w-[49%] md:w-full">
           <Img
             className="h-[264px] md:h-auto object-cover rounded-[10px] w-full"
-            src="images/img_crucero.png"
+            src={"images/"+props.imgUrl}
             alt="crucero_One"
           />
         </div>
@@ -73,6 +74,7 @@ C1HomeDesktopRowsubheading.defaultProps = {
   descriptionTwo:
     "Lorem ipsum dolor sit amet consectetur. Id euismod ullamcorper fames massa mi. Parturient fermentum sit senectus gravida eget proin tempus mus lorem. Aliquet at risus id donec. Rhoncus nulla venenatis libero ac in aenean in.",
   reservarAhoraTwo: "Reservar ahora",
+  imgUrl:'img_rectangle1028.png'
 };
 
 export default C1HomeDesktopRowsubheading;

@@ -7,10 +7,11 @@ type C1HomeDesktopRowcruceroProps = Omit<
   "language" | "heading" | "description" | "reservebutton"
 > &
   Partial<{
-    language: string;
+    subheading: string;
     heading: JSX.Element | string;
     description: string;
     reservebutton: string;
+    imgUrl:string
   }>;
 
 const C1HomeDesktopRowcrucero: React.FC<C1HomeDesktopRowcruceroProps> = (
@@ -22,7 +23,7 @@ const C1HomeDesktopRowcrucero: React.FC<C1HomeDesktopRowcruceroProps> = (
         <div className="flex flex-col items-center justify-start rounded-[10px] w-[49%] md:w-full">
           <Img
             className="h-[264px] md:h-auto object-cover rounded-[10px] w-full"
-            src="images/img_rectangle1028.png"
+            src={"images/"+props.imgUrl}
             alt="crucero"
           />
         </div>
@@ -32,7 +33,7 @@ const C1HomeDesktopRowcrucero: React.FC<C1HomeDesktopRowcruceroProps> = (
               className="text-indigo-A100 text-lg w-full"
               size="txtClashDisplayVariableSemiBold18"
             >
-              {props?.language}
+              {props?.subheading}
             </Text>
             <div className="flex flex-col gap-3 items-start justify-start w-full">
               <div className="flex flex-col items-start justify-start w-full">
@@ -46,9 +47,9 @@ const C1HomeDesktopRowcrucero: React.FC<C1HomeDesktopRowcruceroProps> = (
               </Text>
             </div>
           </div>
-          <Button className="bg-indigo-A100 cursor-pointer font-clashdisplayvariable font-medium py-3.5 rounded-lg text-base text-center text-white-A700 w-[196px]">
+          {/* <Button className="bg-indigo-A100 cursor-pointer font-clashdisplayvariable font-medium py-3.5 rounded-lg text-base text-center text-white-A700 w-[196px]">
             {props?.reservebutton}
-          </Button>
+          </Button> */}
         </div>
       </div>
     </>
@@ -56,7 +57,7 @@ const C1HomeDesktopRowcrucero: React.FC<C1HomeDesktopRowcruceroProps> = (
 };
 
 C1HomeDesktopRowcrucero.defaultProps = {
-  language: "El crucero ",
+  subheading: "El crucero ",
   heading: (
     <Text
       className="sm:text-2xl md:text-[26px] text-[28px] text-gray-50 w-auto"
@@ -76,6 +77,7 @@ C1HomeDesktopRowcrucero.defaultProps = {
   description:
     "Lorem ipsum dolor sit amet consectetur. Aliquam purus varius cursus nibh in magna. Non amet erat mattis mattis integer aliquet amet morbi convallis. At commodo eu sit vitae cursus suspendisse. Tempor magna amet enim pulvinar nisl at velit mi aliquet.",
   reservebutton: "Reservar ahora",
+  imgUrl:'img_rectangle1028.png'
 };
 
 export default C1HomeDesktopRowcrucero;
