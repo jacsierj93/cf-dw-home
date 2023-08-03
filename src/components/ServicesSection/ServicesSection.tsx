@@ -4,7 +4,7 @@ import { Img, Text } from "components/";
 
 const ServicesSection: React.FC<{expanded?:boolean}> = (props) => {
     return (
-    <div className={`absolute bg-gradient2 ${(props.expanded)?'h-auto' : 'h-0'} w-full transition-all py-[50px] duration-300 ease-in-out transform overflow-hidden`}
+    <div className={`relative bg-gradient2 ${(props.expanded)?'h-auto py-[50px]' : 'h-0'} w-full transition-all duration-300 ease-in-out transform overflow-hidden`}
             style={{backgroundColor:'black'}}>
               <Img
                   className="absolute h-[1133px] sm:h-[529px] right-[0] object-cover top-[-62px] sm:top-[-32px]"

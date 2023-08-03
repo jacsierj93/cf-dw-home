@@ -14,7 +14,8 @@ export type Services = {
   subTitle: string,
   title: string,
   image: string,
-  text: string
+  text: string,
+  extraCss?:Object
 }
 
 const HomeDesktopPage: React.FC = () => {
@@ -29,13 +30,15 @@ const HomeDesktopPage: React.FC = () => {
       subTitle: 'Camarotes',
       title: 'Experiencia de lujo.',
       image: 'camarotes.webp',
-      text:"Contamos con diversos camarotes, para que vivas esta experiencia como la quieres vivir, para que vayas con amigos a vivir la mejor experiencia de sus vidas, como también camarotes con vista panorámica para disfrutar en pareja.      "
+      text:"Contamos con diversos camarotes, para que vivas esta experiencia como la quieres vivir, para que vayas con amigos a vivir la mejor experiencia de sus vidas, como también camarotes con vista panorámica para disfrutar en pareja.      ",
+      
     },
     {
       subTitle: 'Beneficios',
       title: 'La Dualidad Cruise.',
       image: 'cf_dualidad.jpg',
-      text:"Cruise Festival ofrece una experiencia única al combinar un emocionante festival de música con una experiencia en crucero. Todo en un ambiente festivo y exclusivo en alta mar.  "
+      text:"Cruise Festival ofrece una experiencia única al combinar un emocionante festival de música con una experiencia en crucero. Todo en un ambiente festivo y exclusivo en alta mar.  ",
+      extraCss:{objectPosition:'0px 75%'}
     },
     {
       subTitle: 'Fiestas y Djs Non-stop',
@@ -183,6 +186,7 @@ const HomeDesktopPage: React.FC = () => {
                   subheading={service.subTitle}
                   description={service.text}
                   imgUrl={service.image}
+                  cssImg={service.extraCss}
                   heading={
                     <Text className="font-bold sm:text-2xl md:text-[26px] text-[28px] text-gray-50 w-auto">
                       <span className="text-gray-900 font-clashgroteskvariable text-left">
@@ -204,6 +208,7 @@ const HomeDesktopPage: React.FC = () => {
                     subheading={service.subTitle}
                     descriptionTwo={service.text}
                     imgUrl={service.image}
+                    cssImg={service.extraCss}
                     headingOne={
                       <Text className="font-bold sm:text-2xl md:text-[26px] text-[28px] text-indigo-A100 w-auto">
                         {/* <span className="text-indigo-A100 font-clashgroteskvariable text-left">
@@ -221,7 +226,7 @@ const HomeDesktopPage: React.FC = () => {
                 
             </ServicesSection>
 
-            <div className={`relative w-full transition-all duration-300 ease-in-out transform pt-[30px] ${(ServicesOpen)?'top-[2700px] sm:top-[4050px]':''}`}
+            <div className={`relative w-full transition-all duration-300 ease-in-out transform pt-[30px]`}
             style={{backgroundColor:'black'}}>
               <div className="bg-no-repeat bg-contain bg-center"
               style={{backgroundImage:"url('images/CF-Figura onda expansiva.svg')"}}>
@@ -360,6 +365,11 @@ const HomeDesktopPage: React.FC = () => {
                             <img className="h-[26px] w-[26px] cursor-pointer"
                             src="images/img_camera.svg"
                             alt="camera"/>
+                          </a>
+                          <a href="https://www.tiktok.com/@cruise.festival?_t=8eXZM7eVrMr&_r=1" target="_blank">
+                            <img className="h-[24px] w-[24px] cursor-pointer"
+                            src="images/tik-tok.png"
+                            alt="tiktok"/>
                           </a>
                       </div>
                     </div>

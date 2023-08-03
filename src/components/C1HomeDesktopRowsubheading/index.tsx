@@ -12,6 +12,7 @@ type C1HomeDesktopRowsubheadingProps = Omit<
     descriptionTwo: JSX.Element | string;
     reservarAhoraTwo: string;
     imgUrl:string;
+    cssImg:Object;
   }>;
 
 const C1HomeDesktopRowsubheading: React.FC<C1HomeDesktopRowsubheadingProps> = (
@@ -55,6 +56,7 @@ const C1HomeDesktopRowsubheading: React.FC<C1HomeDesktopRowsubheadingProps> = (
             className="h-[350px] sm:h-[250px] object-cover rounded-[10px] w-full "
             src={"images/"+props.imgUrl}
             alt="crucero_One"
+            style={props.cssImg}
           />
         </div>
       </div>
@@ -80,7 +82,8 @@ C1HomeDesktopRowsubheading.defaultProps = {
   descriptionTwo:
     "Lorem ipsum dolor sit amet consectetur. Id euismod ullamcorper fames massa mi. Parturient fermentum sit senectus gravida eget proin tempus mus lorem. Aliquet at risus id donec. Rhoncus nulla venenatis libero ac in aenean in.",
   reservarAhoraTwo: "Reservar ahora",
-  imgUrl:'img_rectangle1028.png'
+  imgUrl:'img_rectangle1028.png',
+  cssImg:{}
 };
 
 export default C1HomeDesktopRowsubheading;

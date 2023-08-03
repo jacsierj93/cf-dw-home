@@ -11,7 +11,8 @@ type C1HomeDesktopRowcruceroProps = Omit<
     heading: JSX.Element | string;
     description: JSX.Element | string;
     reservebutton: string;
-    imgUrl:string
+    imgUrl:string;
+    cssImg:Object
   }>;
 
 const C1HomeDesktopRowcrucero: React.FC<C1HomeDesktopRowcruceroProps> = (
@@ -25,6 +26,7 @@ const C1HomeDesktopRowcrucero: React.FC<C1HomeDesktopRowcruceroProps> = (
             className="h-[350px] sm:h-[250px] object-cover rounded-[10px] w-full"
             src={"images/"+props.imgUrl}
             alt="crucero"
+            style={props.cssImg}
           />
         </div>
         <div className="flex flex-col gap-[42px] items-end justify-start w-auto md:w-full">
@@ -81,7 +83,8 @@ C1HomeDesktopRowcrucero.defaultProps = {
   description:
     "Lorem ipsum dolor sit amet consectetur. Aliquam purus varius cursus nibh in magna. Non amet erat mattis mattis integer aliquet amet morbi convallis. At commodo eu sit vitae cursus suspendisse. Tempor magna amet enim pulvinar nisl at velit mi aliquet.",
   reservebutton: "Reservar ahora",
-  imgUrl:'img_rectangle1028.png'
+  imgUrl:'img_rectangle1028.png',
+  cssImg:{}
 };
 
 export default C1HomeDesktopRowcrucero;
