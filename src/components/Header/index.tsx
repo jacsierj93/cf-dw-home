@@ -6,9 +6,9 @@ import C1HomeDesktopNavbar from "components/C1HomeDesktopNavbar";
 
 const Header: React.FC<{}> = (props) => {
     return <>
-        <div id="header" className="flex flex-row md:gap-10 items-center justify-between max-w-[1394px] mx-auto md:px-5 w-full">
+        <div id="header" className="flex flex-row md:gap-10 items-center justify-between max-w-[1394px] mx-auto mb-[20px] md:px-5 w-full">
               <Img
-                className="h-[78px] sm:h-[49px] md:h-auto object-cover"
+                className="h-[78px] md:h-[49px] object-cover cursor-pointer"
                 src="images/img_logocruisefestivalmesa.png"
                 alt="logo_cruisefestival"
               />

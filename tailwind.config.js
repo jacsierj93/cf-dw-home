@@ -110,7 +110,11 @@ module.exports = {
         gradient2: "linear-gradient(180deg ,#9381FF,rgba(252, 47, 0, 0.25) 100%)",
         gradient3: "linear-gradient(180deg ,#111111,#9381ff3f)",
         gradient4: "linear-gradient(180deg ,#fc2f007f,#fc2f0000)",
+        gradient5: "linear-gradient(180deg, rgba(255, 255, 255, 0.75) 54.69%, rgba(255, 255, 255, 0.00) 100%)"
       },
+      transitionProperty: {
+                height: 'height'
+            }
     },
   },
   plugins: [require("@tailwindcss/forms")],

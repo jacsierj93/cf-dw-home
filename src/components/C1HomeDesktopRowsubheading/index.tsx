@@ -7,9 +7,9 @@ type C1HomeDesktopRowsubheadingProps = Omit<
   "subheading" | "headingOne" | "descriptionTwo" | "reservarAhoraTwo"
 > &
   Partial<{
-    subheading: string;
+    subheading: JSX.Element | string;
     headingOne: JSX.Element | string;
-    descriptionTwo: string;
+    descriptionTwo: JSX.Element | string;
     reservarAhoraTwo: string;
     imgUrl:string;
   }>;
@@ -22,22 +22,28 @@ const C1HomeDesktopRowsubheading: React.FC<C1HomeDesktopRowsubheadingProps> = (
       <div className={props.className} style={{width:"100%",maxWidth:"1387px"}}>
         <div className="flex flex-col gap-[42px] items-start justify-end w-auto md:w-full">
           <div className="flex flex-col gap-3 items-start justify-start w-[598px] md:w-full">
-            <Text
-              className="text-indigo-A100 text-lg w-full"
-              size="txtClashDisplayVariableSemiBold18"
-            >
-              {props?.subheading}
-            </Text>
+            {(typeof props?.subheading === "string")?
+              ( <Text
+                className="text-indigo-A100 text-lg w-full"
+                size="txtClashDisplayVariableSemiBold18"
+              >
+                {props?.subheading}
+              </Text>):props.subheading
+            }
+           
             <div className="flex flex-col gap-3 items-start justify-start w-full">
               <div className="flex flex-col items-start justify-start w-full">
                 {props?.headingOne}
               </div>
-              <Text
+              {(typeof props?.descriptionTwo === "string")?
+              (   <Text
                 className="leading-[27.00px] max-w-[598px] md:max-w-full text-gray-900 text-lg"
                 size="txtClashDisplayVariableMedium18"
               >
                 {props?.descriptionTwo}
-              </Text>
+              </Text>):props.descriptionTwo
+            }
+            
             </div>
           </div>
           {/* <Button className="bg-indigo-A100 cursor-pointer font-clashdisplayvariable font-medium py-3.5 rounded-lg text-base text-center text-white-A700 w-[196px]">
@@ -46,7 +52,7 @@ const C1HomeDesktopRowsubheading: React.FC<C1HomeDesktopRowsubheadingProps> = (
         </div>
         <div className="flex flex-col items-center justify-start rounded-[10px] w-[49%] md:w-full">
           <Img
-            className="h-[264px] md:h-auto object-cover rounded-[10px] w-full"
+            className="h-[350px] sm:h-[250px] object-cover rounded-[10px] w-full "
             src={"images/"+props.imgUrl}
             alt="crucero_One"
           />

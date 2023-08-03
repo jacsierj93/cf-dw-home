@@ -21,7 +21,13 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
         className={props.className}
         style={{ backgroundImage: "url('images/img_imgcentral.png')" }}
       >
-        <div className="bg-gray-900_7f flex flex-col gap-8 items-center justify-center p-12 md:px-10 sm:px-5 rounded-[10px] w-auto md:w-full">
+        <div className="w-full h-full object-cover absolute">
+            <video className="w-full max-w-none h-full object-cover" playsInline autoPlay muted loop id="video-desktop">
+              <source src="images/cf_home.mp4" type="video/mp4"/>
+              Your browser does not support the video tag.
+            </video>
+        </div>
+        <div className="bg-gray-900_7f flex flex-col gap-8 items-center justify-center p-12 md:px-10 sm:px-5 rounded-[10px] w-auto md:w-full z-10">
           {props?.spantext}
           <Text
             className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
