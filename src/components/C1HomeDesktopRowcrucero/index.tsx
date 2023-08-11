@@ -45,7 +45,7 @@ const C1HomeDesktopRowcrucero: React.FC<C1HomeDesktopRowcruceroProps> = (
               </div>
               {(typeof props?.description === "string")?
               (   <Text
-                className="leading-[27.00px] max-w-[598px] md:max-w-full text-gray-900 text-lg"
+                className="leading-[27.00px] max-w-[598px] md:max-w-full text-gray-900 text-lg font-normal"
                 size="txtClashDisplayVariableMedium18"
               >
                 {props?.description}

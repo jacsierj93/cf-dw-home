@@ -6,9 +6,16 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    screens: { md: { max: "1050px" }, sm: { max: "550px" } },
+    screens: {xl: {min: "1280px"}, md: { max: "1050px" }, sm: { max: "550px" }},
     extend: {
       colors: {
+        black: {
+          900: "#010101",
+          "900_7f": "#0c0c0c7f",
+          "900_3f": "#0000003f",
+          "900_01": "#101010",
+          "900_02": "#0c0c0c",
+        },
         red: {
           400: "#e4533f",
           500: "#e44b3f",
@@ -44,6 +51,7 @@ module.exports = {
           "600_01": "#d9b82f",
           "600_02": "#d8bc2c",
           A700: "#d2d700",
+          A700_9e: "#d2d7009e",
           "600_09": "#dab430",
           "600_07": "#d3d018",
           "600_08": "#d2d311",
@@ -51,7 +59,6 @@ module.exports = {
           "600_06": "#d4cc1e",
           A700_01: "#d1d706",
         },
-        black: { 900: "#010101", "900_01": "#101010" },
         deep_orange: {
           400: "#e1753f",
           700: "#e73a1e",
@@ -95,6 +102,17 @@ module.exports = {
           900: "#111111",
           "900_01": "#191d23",
           "900_7f": "#1111117f",
+          200: "#ececec",
+          300: "#ddeedd",
+          500: "#ae6d86",
+          "900_0c": "#1122110c",
+          "200_01": "#e7e7e7",
+          "50_7f": "#fafafa7f",
+          "50_01": "#fbfcfc",
+          "900_bf": "#111111bf",
+          "300_71": "#ddeedd25",
+          "50_71": "#fbfcfc71",
+          "50_fa": "#fafafafa",
         },
         deep_purple: { 300: "#8f78ae" },
       },
@@ -103,6 +121,7 @@ module.exports = {
         inter: "Inter",
         clashgroteskvariable: "Clash Grotesk Variable",
         tanker: "Tanker",
+        montserrat: "Montserrat",
       },
       backgroundImage: {
         gradient: "linear-gradient(180deg ,#fc2f00,#fc2f0000)",
@@ -110,11 +129,22 @@ module.exports = {
         gradient2: "linear-gradient(180deg ,#9381FF,rgba(252, 47, 0, 0.25) 100%)",
         gradient3: "linear-gradient(180deg ,#111111,#9381ff3f)",
         gradient4: "linear-gradient(180deg ,#fc2f007f,#fc2f0000)",
-        gradient5: "linear-gradient(180deg, rgba(255, 255, 255, 0.75) 54.69%, rgba(255, 255, 255, 0.00) 100%)"
+        gradient5: "linear-gradient(180deg, rgba(255, 255, 255, 0.75) 54.69%, rgba(255, 255, 255, 0.00) 100%)",
+        gradient6: "linear-gradient(180deg, rgba(252, 47, 0, 0.25) 9.90%, #9381FF 86.46%)",
+        gradient7: "linear-gradient(180deg, rgba(250, 18, 54, 0.75) 9.90%, #9381FF 86.46%)"
       },
       transitionProperty: {
-                height: 'height'
-            }
+          height: 'height'
+      },
+      spacing: {
+        'overflow': '170%',
+      }
+    },
+    boxShadow: {
+      bs2: "0px 2px  4px 0px #0857cb26",
+      bs: "0px 3px  4px 0px #0857cb26",
+      bs1: "0px 2px  3px 0px #0000003f",
+      bs3: "0px 4px  16px 0px #1122110c",
     },
   },
   plugins: [require("@tailwindcss/forms")],

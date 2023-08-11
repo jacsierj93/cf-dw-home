@@ -8,7 +8,7 @@ type C1HomeDesktopImgcentralProps = Omit<
 > &
   Partial<{
     spantext: JSX.Element | string;
-    description: string;
+    description: JSX.Element | string;
     buttontext: string;
   }>;
 
@@ -19,22 +19,27 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
     <>
       <div
         className={props.className}
-        style={{ backgroundImage: "url('images/img_imgcentral.png')" }}
+        style={{ backgroundImage: "url('/images/img_imgcentral.png')" }}
       >
         <div className="w-full h-full object-cover absolute">
             <video className="w-full max-w-none h-full object-cover" playsInline autoPlay muted loop id="video-desktop">
-              <source src="images/cf_home.mp4" type="video/mp4"/>
+              <source src="/images/cf_home.mp4" type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
         </div>
         <div className="bg-gray-900_7f flex flex-col gap-8 items-center justify-center p-12 md:px-10 sm:px-5 rounded-[10px] w-auto md:w-full z-10">
           {props?.spantext}
-          <Text
-            className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
-            size="txtClashGroteskVariableMedium28"
-          >
-            {props?.description}
-          </Text>
+          {
+            (typeof props?.description == 'string')?
+            (<Text
+              className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
+              size="txtClashGroteskVariableMedium28"
+            >
+              {props?.description}
+            </Text>)
+            :props?.description
+          }
+          
         </div>
         {/* <Button className="mt-8 bg-lime-A700 cursor-pointer font-clashdisplayvariable font-semibold py-3.5 rounded-lg text-base text-black-900 text-center w-[196px]">
           {props?.buttontext}

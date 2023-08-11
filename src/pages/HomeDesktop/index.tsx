@@ -22,13 +22,13 @@ const HomeDesktopPage: React.FC = () => {
   const listServices: Services[] = [
     {
       subTitle: 'El crucero',
-      title: 'La mejor comodidad ',
+      title: 'Experiencia de lujo.',
       image: 'elCrucero.jpg',
       text:"¡Prepárate para una experiencia épica en alta mar! Cruise Festival es el crucero de lujo que lo tiene todo: espacios amplios, fiestas deslumbrantes y una personalidad que te dejará sin aliento. Desde elegantes restaurantes hasta bares exclusivos, cada rincón te sorprenderá. "
     },
     {
       subTitle: 'Camarotes',
-      title: 'Experiencia de lujo.',
+      title: 'La mejor comodidad ',
       image: 'camarotes.webp',
       text:"Contamos con diversos camarotes, para que vivas esta experiencia como la quieres vivir, para que vayas con amigos a vivir la mejor experiencia de sus vidas, como también camarotes con vista panorámica para disfrutar en pareja.      ",
       
@@ -38,7 +38,7 @@ const HomeDesktopPage: React.FC = () => {
       title: 'La Dualidad Cruise.',
       image: 'cf_dualidad.jpg',
       text:"Cruise Festival ofrece una experiencia única al combinar un emocionante festival de música con una experiencia en crucero. Todo en un ambiente festivo y exclusivo en alta mar.  ",
-      extraCss:{objectPosition:'0px 75%'}
+      
     },
     {
       subTitle: 'Fiestas y Djs Non-stop',
@@ -90,7 +90,6 @@ const HomeDesktopPage: React.FC = () => {
           <C1HomeDesktopImgcentral
             className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] md:px-10 sm:px-5 w-full"
             style={{ backgroundImage: "url('images/img_imgcentral.png')" }}
-            description="Sé parte del primer festival de música electrónica a bordo de un crucero de lujo. 72 Horas NON-STOP con los mejores DJs internacionales recorriendo Buenos Aires, Punta del Este y Montevideo. "
             spantext={
               <Text className="font-bold leading-[90.00px] md:text-5xl text-6xl text-center text-gray-50">
                 <span className="text-gray-50 font-clashgroteskvariable">
@@ -104,6 +103,14 @@ const HomeDesktopPage: React.FC = () => {
                   FESTIVAL
                   </>
                 </span>
+              </Text>
+            }
+            description={
+              <Text
+                className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
+                size="txtClashGroteskVariableMedium28"
+              >
+                Sé parte del primer festival de música electrónica a bordo de un crucero de lujo. 72 Horas NON-STOP con los mejores DJs internacionales. <span className="font-bold">Zarparás desde Buenos Aires,</span> recorriendo Punta del Este y Montevideo <span className="font-bold">la primera semana de Abril 2024.</span>
               </Text>
             }
           />
@@ -259,7 +266,7 @@ const HomeDesktopPage: React.FC = () => {
                           </Text>}
                           //
                           descriptionTwo={<Text
-                            className="leading-[27.00px] max-w-[598px] md:max-w-full text-white text-lg"
+                            className="leading-[27.00px] max-w-[598px] md:max-w-full text-white text-lg font-normal"
                             style={{color:'#fff'}}
                             size="txtClashDisplayVariableMedium18"
                           >
@@ -285,7 +292,7 @@ const HomeDesktopPage: React.FC = () => {
                             {mood.subTitle}
                           </Text>}
                           description={<Text
-                            className="leading-[27.00px] max-w-[598px] md:max-w-full text-white text-lg"
+                            className="leading-[27.00px] max-w-[598px] md:max-w-full text-white text-lg font-normal"
                             style={{color:'#fff'}}
                             size="txtClashDisplayVariableMedium18"
                           >
@@ -366,10 +373,20 @@ const HomeDesktopPage: React.FC = () => {
                             src="images/img_camera.svg"
                             alt="camera"/>
                           </a>
+                          <a href="https://open.spotify.com/user/31yrnfwmobp5omwu7dyn37rsxxri?si=tvj-hXr0SaODAADBkucUpA" target="_blank">
+                            <img className="h-[24px] w-[24px] cursor-pointer"
+                            src="images/spotify.png"
+                            alt="spotify"/>
+                          </a>
                           <a href="https://www.tiktok.com/@cruise.festival?_t=8eXZM7eVrMr&_r=1" target="_blank">
                             <img className="h-[24px] w-[24px] cursor-pointer"
                             src="images/tik-tok.png"
                             alt="tiktok"/>
+                          </a>
+                          <a href="mailto:Info@cruise-festival.com" target="_blank">
+                            <img className="h-[26px] w-[26px] cursor-pointer"
+                            src="images/email.png"
+                            alt="mail"/>
                           </a>
                       </div>
                     </div>

@@ -38,7 +38,7 @@ const ServicesSection: React.FC<{expanded?:boolean}> = (props) => {
                 </div>
                 <div className="flex flex-col font-clashgroteskvariable justify-start">
                   <Text
-                    className="text-5xl sm:text-[38px] md:text-[44px] text-black-900_01"
+                    className="text-5xl sm:text-[38px] md:text-[4 px] text-black-900_01 font-semibold"
                     size="txtClashGroteskVariableBold48Black90001"
                   >
                     La máxima experiencia de lujo y diversión en un crucero.

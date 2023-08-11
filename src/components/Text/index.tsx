@@ -27,6 +27,31 @@ const sizeClasses = {
   txtClashDisplayVariableSemiBold18: "font-clashdisplayvariable font-semibold",
   txtInterRegular16: "font-inter font-normal",
   txtClashGroteskVariableMedium28: "font-clashgroteskvariable font-medium",
+  txtMontserratMedium12: "font-medium font-montserrat",
+  txtMontserratBold24: "font-bold font-montserrat",
+  txtMontserratMedium14: "font-medium font-montserrat",
+  txtClashGroteskVariableSemiBold20: "font-clashgroteskvariable font-normal",
+  txtClashDisplayVariableMedium14: "font-clashdisplayvariable font-medium",
+  txtClashGroteskVariableMedium18WhiteA700:
+    "font-clashgroteskvariable font-medium",
+  txtClashGroteskVariableSemiBold14Black90001:
+    "font-clashgroteskvariable font-semibold",
+  txtClashGroteskVariableSemiBold14: "font-clashgroteskvariable font-semibold",
+  txtClashGroteskVariableSemiBold16: "font-clashgroteskvariable font-semibold",
+  txtClashGroteskVariableSemiBold18: "font-clashgroteskvariable font-semibold",
+  txtClashGroteskVariableBold32: "font-bold font-clashgroteskvariable",
+  txtClashGroteskVariableBold48Amber600: "font-bold font-clashgroteskvariable",
+  txtClashGroteskVariableBold16: "font-bold font-clashgroteskvariable",
+  txtMontserratRegular14: "font-montserrat font-normal",
+  txtClashDisplayVariableSemiBold16: "font-clashdisplayvariable font-semibold",
+  txtClashGroteskVariableBold22: "font-bold font-clashgroteskvariable",
+  txtClashGroteskVariableSemiBold32: "font-clashgroteskvariable font-semibold",
+  txtMontserratSemiBold24: "font-montserrat font-semibold",
+  txtClashDisplayVariableMedium16Gray5001:
+    "font-clashdisplayvariable font-medium",
+  txtClashGroteskVariableMedium16: "font-clashgroteskvariable font-medium",
+  txtClashDisplayVariableMedium16Gray50:
+    "font-clashdisplayvariable font-medium",
 } as const;
 
 export type TextProps = Partial<{

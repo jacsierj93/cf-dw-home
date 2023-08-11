@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import { Text } from "components";
 
 type C1HomeDesktopNavbarProps = Omit<
@@ -21,13 +23,17 @@ const C1HomeDesktopNavbar: React.FC<C1HomeDesktopNavbarProps> = (props) => {
           className="text-lg text-lime-A700 w-auto"
           size="txtClashGroteskVariableBold18"
         >
+          <Link to="/">
           {props?.hometext}
+          </Link>
         </Text>
         <Text
           className="text-gray-50 text-lg w-auto"
           size="txtClashGroteskVariableMedium18Gray50"
         >
+          <Link to="/cabinas">
           {props?.cabinastext}
+          </Link>
         </Text>
         <Text
           className="text-gray-50 text-lg w-auto"
