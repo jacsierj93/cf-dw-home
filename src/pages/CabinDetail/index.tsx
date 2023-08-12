@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Button, Img, Line, Text, List } from "components";
 import C1HomeDesktopDjcard from "components/C1HomeDesktopDjcard";
@@ -10,7 +10,7 @@ import C1HomeDesktopRowsubheading from "components/C1HomeDesktopRowsubheading";
 import CabinasComponent from "components/Cabinas";
 import Header from "components/Header";
 import ServicesSection from "components/ServicesSection/ServicesSection";
-import { listCabins } from "utils/lists";
+import { Cabins, listCabins } from "utils/lists";
 
 import { useParams } from "react-router-dom";
 
@@ -18,9 +18,19 @@ import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 
 
+const getCabin = async (slug) => {
+  return listCabins.find((elem) => elem.slug = slug);
+}
 const CabinsDetailsPage: React.FC = () => {
 
-  const {id} = useParams(); 
+  const {slug} = useParams(); 
+  
+  const [cabin, setCabin] = useState<Cabins | undefined>();
+
+  useEffect(()=>{
+    getCabin(slug).then((cabina)=>setCabin(cabina));
+    console.log(cabin)
+  },[])
 
   const listFeatures : string[] = [
     "Outdoor pool",
@@ -62,7 +72,7 @@ const CabinsDetailsPage: React.FC = () => {
                 className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
                 size="txtClashGroteskVariableMedium28"
               >
-                Ya sea que elijas un camarote interior acogedor o una suite con vista al mar, te garantizamos una experiencia de alojamiento excepcional. Descansa, relájate y alístate para volver a la fiesta.  Nuestro crucero de música electrónica te ofrece la mejor experiencia en alta mar. 
+                Ya sea que elijas un cabina interior acogedor o una suite con vista al mar, te garantizamos una experiencia de alojamiento excepcional. Descansa, relájate y alístate para volver a la fiesta.  Nuestro crucero de música electrónica te ofrece la mejor experiencia en alta mar. 
               </Text>
             }
           />
@@ -74,16 +84,16 @@ const CabinsDetailsPage: React.FC = () => {
         <div className={`relative w-full transition-all duration-300 ease-in-out transform pt-[30px]`}
             style={{backgroundColor:'black'}}>
           <div className="bg-gradient7  flex flex-col gap-[27px] items-center justify-start p-[15px] w-full">
-            <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between max-w-[1408px] mt-[17px] px-4 w-full">
+            <div className="flex sm:flex-col flex-row md:gap-10 items-center justify-between max-w-[1408px] mt-[17px] px-4 w-full">
                 <div className="flex md:flex-1 flex-col gap-4 items-start justify-start w-auto md:w-full sm:items-center">
-                <div className="flex md:flex-col flex-row gap-4 items-end justify-start w-auto md:w-full">
+                <div className="flex md:flex-col flex-row gap-4 items-end md:items-start justify-start w-auto md:w-full">
                     <Text
-                    className="text-5xl sm:text-[38px] md:text-[44px] text-gray-50 w-auto"
+                    className="text-5xl sm:text-[38px] md:text-[44px] text-gray-50 w-auto sm:text-center"
                     size="txtClashGroteskVariableBold48"
                     >
-                    <>{listCabins[id].name}</>
+                    <>{cabin?.name}</>
                     </Text>
-                    <div className="flex sm:flex-col flex-row font-clashdisplayvariable gap-8 items-start justify-start w-auto sm:w-full">
+                    <div className="flex sm:flex-col flex-row font-clashdisplayvariable gap-8 items-start justify-start w-auto sm:w-full sm:items-center">
                     <div className="flex flex-row gap-1 items-center justify-start w-auto">
                         <div className="flex flex-row items-start justify-start w-auto">
                         <Img
@@ -119,78 +129,35 @@ const CabinsDetailsPage: React.FC = () => {
                         Estadía All Inclusive
                         </Text>
                     </div>
-                    <div className="flex flex-row gap-1 items-start justify-start w-auto">
-                        <Img
-                        className="h-4 w-4"
-                        src="/images/img_cafe.svg"
-                        alt="cafe"
-                        />
-                        <Text
-                        className="text-base text-gray-50 w-auto"
-                        size="txtClashDisplayVariableMedium16Gray50"
-                        >
-                        <span className="text-gray-50 font-clashdisplayvariable text-left font-medium">
-                            20+
-                        </span>
-                        <span className="text-gray-50 font-clashdisplayvariable text-left font-medium">
-                            {" "}
-                            Amenities
-                        </span>
-                        </Text>
-                    </div>
+                  
                     </div>
                 </div>
-                <div className="flex flex-row gap-1 items-center justify-start w-auto">
-                    <div className="flex flex-col font-clashdisplayvariable items-start justify-start w-10">
-                    <Button className="border border-lime-A700 border-solid cursor-pointer font-semibold h-8 py-[7px] rounded text-center text-lime-A700 text-sm w-full">
-                        5.0
-                    </Button>
-                    </div>
-                    <Text
-                    className="text-lime-A700 text-sm w-auto"
-                    size="txtMontserratMedium14"
-                    >
-                    <span className="text-lime-A700 font-clashdisplayvariable text-left font-semibold">
-                        Muy bueno
-                    </span>
-                    <span className="text-lime-A700 font-montserrat text-left font-medium">
-                        {" "}
-                    </span>
-                    <span className="text-lime-A700 font-clashdisplayvariable text-left font-medium">
-                        371 reseñas
-                    </span>
-                    </Text>
+                
                 </div>
-                </div>
-                <div className="flex flex-col font-montserrat gap-4 items-end justify-start w-auto sm:items-center">
-                <Text
-                    className="text-2xl md:text-[22px] text-gray-50_fa text-right sm:text-xl w-auto"
-                    size="txtMontserratBold24"
-                >
-                    <span className="md:text-3xl sm:text-[28px] text-gray-50_fa font-clashgroteskvariable text-[32px] font-bold">
-                      
-                    {listCabins[id].price}
-                    </span>
+                <div className="flex flex-col font-montserrat gap-4 items-end justify-start w-auto sm:items-ends sm:w-full">
+                  <Text
+                      className="text-2xl md:text-[22px] text-gray-50_fa text-right sm:text-xl w-auto"
+                      size="txtMontserratBold24"
+                  >
                     <span className="text-gray-50_fa font-clashgroteskvariable text-base font-bold">
-                    /persona
-                    </span>
-                </Text>
-                <div className="flex flex-row font-clashdisplayvariable gap-[15px] items-start justify-start w-auto">
+                      desde {" "}<br/>
+                      </span>
+                      <span className="md:text-3xl sm:text-[28px] text-gray-50_fa font-clashgroteskvariable text-[32px] font-bold">
+                      
+                      {" USD "+cabin?.price}<br/>
+                      </span>
+                      <span className="text-gray-50_fa font-clashgroteskvariable text-base font-bold">
+                      {" "} por persona
+                      </span>
+                  </Text>
+                <div className="flex flex-row font-clashdisplayvariable gap-[15px] items-center justify-center w-full">
                     <List
-                    className="sm:flex-col flex-row gap-[15px] grid grid-cols-2 w-[35%]"
+                    className="sm:flex-col flex-row gap-[15px] w-auto"
                     orientation="horizontal"
                     >
                     <div className="flex flex-col items-start justify-start w-full">
-                        <Button className="border border-gray-50 border-solid flex h-12 items-center justify-center p-3.5 rounded w-12">
-                        <Img
-                            className="h-5"
-                            src="/images/img_heart.svg"
-                            alt="heart"
-                        />
-                        </Button>
-                    </div>
-                    <div className="flex flex-col items-start justify-start w-full">
-                        <Button className="border border-gray-50 border-solid flex h-12 items-center justify-center p-3.5 rounded w-12">
+                        <Button className="border border-gray-50 border-solid flex h-12 items-center justify-center p-3.5 rounded w-12"
+                        onClick={()=>navigator.clipboard.writeText(window.location.href)}>
                         <Img
                             className="h-5"
                             src="/images/img_search.svg"
@@ -210,46 +177,51 @@ const CabinsDetailsPage: React.FC = () => {
                     <div className="row-span-4 col-span-2">
                         <Img
                         className="flex-1 md:flex-none md:h-auto sm:h-auto h-full max-h-[685px] object-cover rounded-bl-[12px] rounded-tl-[12px] sm:w-[] md:w-[]"
-                        src={`/images/${listCabins[id].images[1]}`}
+                        src={`/images/${cabin?.images[1]}`}
                         alt="rectangleThree"
                         />
                     </div>
                     <div className="row-span-2">
                         <Img
                         className="flex-1  h-full max-h-[338px] object-cover sm:w-[]"
-                        src={`/images/${listCabins[id].images[2]}`}
+                        src={`/images/${cabin?.images[2]}`}
                         alt="rectangleFive"
                         />
                     </div>
                     <div className="row-span-2">
                         <Img
                         className="flex-1 h-full max-h-[338px] object-cover  sm:w-[]"
-                        src={`/images/${listCabins[id].images[3]}`}
+                        src={`/images/${cabin?.images[3]}`}
                         alt="rectangleSix"
                         />
                     </div>
                     <div className="row-span-2 ">
                         <Img
                         className="flex-1 md:flex-none h-full max-h-[338px] rounded-tr-[12px] object-cover sm:w-[] md:w-[]"
-                        src={`/images/${listCabins[id].images[4]}`}
+                        src={`/images/${cabin?.images[4]}`}
                         alt="rectangleFive_One"
                         />
                     </div>
                     <div className="row-span-2 ">
                         <Img
                             className="h-full m-auto object-cover rounded-br-[12px] w-full"
-                            src={`/images/${listCabins[id].images[5]}`}
+                            src={`/images/${cabin?.images[5]}`}
                             alt="rectangleSix_One"
                         />
                     </div>
                 </div>
-                <div className="hidden sm:block w-full h-full">
-                  <AwesomeSlider bullets={false} >
-                    {listCabins[id].images.map((image)=>(
-                      <div data-src={`/images/${image}`} />
-                    ))}
-                  </AwesomeSlider>
-                </div>
+                {
+                  (typeof cabin != 'undefined')?
+                  (
+                    <div className="hidden sm:block w-full h-full">
+                      <AwesomeSlider bullets={false} >
+                        {cabin?.images.map((image)=>(
+                          <div data-src={`/images/${image}`} />
+                        ))}
+                      </AwesomeSlider>
+                    </div>
+                  ):""
+                }
                 
             </div>
             
@@ -260,7 +232,7 @@ const CabinsDetailsPage: React.FC = () => {
                     src="/images/frame.svg"
                     alt="cabina_detalle"
                 />
-              <div className="w-full flex flex-col items-center justify-start z-10 sm:px-5">
+              <div className="w-full flex flex-col items-center justify-start z-10 sm:px-5 mb-[35px]">
                 <Line className="bg-gray-300_71 h-px w-[89%] my-[35px]" />
                 <div className="bg-gray-900_bf flex flex-col items-start justify-start md:px-10 px-12 sm:px-5 py-6 rounded-[20px] w-auto md:w-full">
                     <div className="flex flex-col gap-3 items-start justify-start w-full">
@@ -276,68 +248,25 @@ const CabinsDetailsPage: React.FC = () => {
                             size="txtClashDisplayVariableSemiBold18"
                         >
                             <span className="text-white-A700 font-clashdisplayvariable text-left font-normal  ">
-                            {listCabins[id].description}
+                            {cabin?.description}
                             </span>
-                            {/* <span className="text-white-A700 font-clashdisplayvariable text-left font-semibold">
-                            .{" "}
-                            </span>
-                            <span className="text-white-A700 font-clashdisplayvariable text-left font-semibold">
-                            {" "}
-                            </span> */}
-                            {/* <span className="text-white-A700 font-clashdisplayvariable text-left font-bold">
-                            El precio esta expresado por noche, por persona,
-                            para toda la estadía all inclusive.
-                            </span> */}
+                            <br/>
+                            <br/>
+                            <br/>
+                            <ul className="list-disc text-white-A700">  
+                              {
+                                (typeof cabin != 'undefined')?
+                                  cabin.features.map((feature)=>(
+                                    <li>
+                                      <span className="text-white-A700 font-clashdisplayvariable text-left font-normal  ">
+                                        {feature}
+                                      </span>
+                                    </li>
+                                  )):(<li></li>)
+                              }
+                            </ul>
                         </Text>
                         </div>
-                        {/* <div className="flex flex-col items-start justify-start w-auto">
-                        <div className="bg-indigo-A100 flex flex-col h-[130px] md:h-auto items-center justify-start p-4 rounded-[12px] w-[166px]">
-                            <div className="flex flex-col gap-2.5 items-start justify-start w-auto">
-                            <Text
-                                className="md:text-3xl sm:text-[28px] text-[32px] text-gray-50_01 w-auto"
-                                size="txtClashGroteskVariableSemiBold32"
-                            >
-                                4.2
-                            </Text>
-                            <div className="flex flex-col gap-1 items-start justify-start w-auto">
-                                <Text
-                                className="text-base text-gray-50_01 w-auto"
-                                size="txtClashGroteskVariableBold16"
-                                >
-                                Very good
-                                </Text>
-                                <Text
-                                className="text-base text-gray-50_01 w-auto"
-                                size="txtClashGroteskVariableMedium16"
-                                >
-                                371 reviews
-                                </Text>
-                            </div>
-                            </div>
-                        </div>
-                        </div> */}
-                    </div>
-
-                    <div className="snap-x bg-gray-900_bf overflow-x-auto flex font-clashdisplayvariable gap-3 justify-start max-w-[1256px] px-3 py-1.5 rounded-[20px] mt-[32px] w-full">
-                      {
-                        listFeatures.map((value)=>(
-                          <div className="snap-start border border-lime-A700 border-solid flex flex-col h-[98px] md:h-auto items-start justify-start pl-4 md:pr-10 pr-16 sm:pr-5 py-4 rounded-[12px] shrink-0 w-[143px]">
-                            <div className="flex flex-col h-[66px] md:h-auto items-start justify-between">
-                              <Img
-                                className="h-8 w-8"
-                                src="/images/img_user.svg"
-                                alt="user"
-                              />
-                              <Text
-                                className="text-gray-50_01 text-sm w-auto"
-                                size="txtClashDisplayVariableMedium14"
-                              >
-                                {value}
-                              </Text>
-                            </div>
-                          </div>
-                        ))
-                      }
                     </div>
                 </div>
               </div>

@@ -42,7 +42,7 @@ const CabinsPage: React.FC = () => {
                 className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
                 size="txtClashGroteskVariableMedium28"
               >
-                Ya sea que elijas un camarote interior acogedor o una suite con vista al mar, te garantizamos una experiencia de alojamiento excepcional. Descansa, relájate y alístate para volver a la fiesta.  Nuestro crucero de música electrónica te ofrece la mejor experiencia en alta mar. 
+                Ya sea que elijas un cabina interior acogedor o una suite con vista al mar, te garantizamos una experiencia de alojamiento excepcional. Descansa, relájate y alístate para volver a la fiesta.  Nuestro crucero de música electrónica te ofrece la mejor experiencia en alta mar. 
               </Text>
             }
           />
@@ -63,161 +63,7 @@ const CabinsPage: React.FC = () => {
             
             <div className="flex flex-row gap-[18px] items-start justify-center w-full bg-gradient6 py-[54px] z-10">
               <div className="flex flex-col gap-10 h-[416px] md:h-auto items-start justify-between mb-[470px] p-3 w-[435px] md:hidden ">
-                  {/* <div className="flex flex-col gap-10">
-                    <div className="flex flex-col font-clashgroteskvariable gap-10 items-start justify-start w-auto sm:w-full">
-                      <div className="flex flex-col gap-[13px] items-start justify-start w-auto sm:w-full">
-                        <Text
-                          className="text-gray-50 text-lg w-[195px]"
-                          size="txtClashGroteskVariableSemiBold18"
-                        >
-                          Presupuesto por noche
-                        </Text>
-                        <div className="flex flex-col items-center justify-start w-auto sm:w-full">
-                          <div className="flex flex-row gap-[225px] items-center justify-start w-auto sm:w-full">
-                            <Text
-                              className="text-gray-50 text-lg w-auto"
-                              size="txtClashGroteskVariableSemiBold18"
-                            >
-                              U$s 150
-                            </Text>
-                            <Text
-                              className="text-gray-50 text-lg w-[86px]"
-                              size="txtClashGroteskVariableSemiBold18"
-                            >
-                              U$s 5000
-                            </Text>
-                          </div>
-                          <div className="h-9 md:h-[34px] relative w-[74%]">
-                            <div className="absolute bg-gray-200 flex flex-col inset-x-[0] items-start justify-start mx-auto sm:px-5 px-[38px] rounded-[1px] top-[8%] w-full">
-                              <Line className="bg-lime-A700 h-0.5 rounded-[1px] w-4/5" />
-                            </div>
-                            <div className="absolute flex flex-col h-full inset-y-[0] items-center justify-start my-auto right-[0] w-[90%]">
-                              <div className="flex flex-col justify-start w-full">
-                                <div className="flex flex-row gap-[152px] items-center justify-start md:ml-[0] ml-[5px] w-[69%] md:w-full">
-                                  <div className="bg-lime-A700 flex flex-col items-center justify-start rotate-[90deg] rounded-[5px] shadow-bs w-[6%]">
-                                    <div className="bg-white-A700 h-1 rotate-[-90deg] rounded-sm shadow-bs1 w-[5px]"></div>
-                                  </div>
-                                  <div className="bg-lime-A700 flex flex-col items-center justify-start rotate-[90deg] rounded-[5px] shadow-bs2 w-[6%]">
-                                    <div className="bg-white-A700 h-1 rotate-[-90deg] rounded-sm shadow-bs1 w-[5px]"></div>
-                                  </div>
-                                </div>
-                                <div className="flex flex-row items-center justify-between w-full">
-                                  <div className="md:h-6 h-[25px] relative w-[30%]">
-                                    <Img
-                                      className="h-6 m-auto"
-                                      src="images/img_signal.svg"
-                                      alt="signal"
-                                    />
-                                    <Text
-                                      className="absolute h-max inset-[0] justify-center m-auto text-base text-white-A700 w-max"
-                                      size="txtClashGroteskVariableSemiBold16"
-                                    >
-                                      U$s 275
-                                    </Text>
-                                  </div>
-                                  <div className="md:h-6 h-[26px] pb-0.5 relative w-2/5">
-                                    <Img
-                                      className="h-6 mx-auto"
-                                      src="images/img_signal.svg"
-                                      alt="signal_One"
-                                    />
-                                    <Text
-                                      className="absolute bottom-[8%] inset-x-[0] mx-auto text-base text-white-A700 w-max"
-                                      size="txtClashGroteskVariableSemiBold16"
-                                    >
-                                      U$s 3000
-                                    </Text>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-[9px] items-start justify-start w-auto">
-                        <Text
-                          className="text-gray-50 text-lg w-auto"
-                          size="txtClashGroteskVariableSemiBold18"
-                        >
-                          Preferencia de cama
-                        </Text>
-                        <div className="flex flex-row gap-4 items-start justify-start w-auto">
-                          <Text
-                            className="bg-lime-A700 border border-lime-A700 border-solid h-[22px] justify-center px-2 rounded-[11px] text-center text-gray-50 text-sm w-12"
-                            size="txtClashGroteskVariableSemiBold14"
-                          >
-                            Twin
-                          </Text>
-                          <Text
-                            className="bg-gray-200_01 h-[22px] justify-center px-2 rounded-[11px] text-black-900_01 text-center text-sm w-[59px]"
-                            size="txtClashGroteskVariableSemiBold14Black90001"
-                          >
-                            Queen
-                          </Text>
-                          <Text
-                            className="bg-gray-200_01 h-[22px] justify-center px-[9px] py-0.5 rounded-[11px] text-black-900_01 text-center text-sm w-[47px]"
-                            size="txtClashGroteskVariableSemiBold14Black90001"
-                          >
-                            King
-                          </Text>
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-[21px] items-start justify-start w-auto sm:w-full">
-                        <Text
-                          className="text-gray-50 text-lg w-[145px]"
-                          size="txtClashGroteskVariableSemiBold18"
-                        >
-                          Tipo de camarote
-                        </Text>
-                        <div className="flex flex-col gap-[18px] items-start justify-start w-auto sm:w-full">
-                          <div className="flex sm:flex-col flex-row gap-4 items-start justify-start w-auto sm:w-full">
-                            <Text
-                              className="bg-lime-A700 border border-lime-A700 border-solid h-[22px] justify-center px-1.5 rounded-[11px] text-center text-gray-50 text-xs w-[109px]"
-                              size="txtClashGroteskVariableSemiBold14"
-                            >
-                              Cabina interior
-                            </Text>
-                            <Text
-                              className="bg-gray-200_01 h-[22px] justify-center px-[5px] rounded-[11px] text-black-900_01 text-center text-xs w-[111px]"
-                              size="txtClashGroteskVariableSemiBold14Black90001"
-                            >
-                              Cabina exterior
-                            </Text>
-                            <Text
-                              className="bg-gray-200_01 h-[22px] justify-center px-2 rounded-[11px] text-black-900_01 text-center text-xs w-[133px]"
-                              size="txtClashGroteskVariableSemiBold14Black90001"
-                            >
-                              Cabina con balcón
-                            </Text>
-                          </div>
-                          <div className="flex flex-row gap-4 items-start justify-start w-auto">
-                            <Text
-                              className="bg-gray-200_01 h-[22px] justify-center px-2 rounded-[11px] text-black-900_01 text-center text-xs w-[50px]"
-                              size="txtClashGroteskVariableSemiBold14Black90001"
-                            >
-                              Suite
-                            </Text>
-                            <Text
-                              className="bg-gray-200_01 h-[22px] justify-center px-1.5 rounded-[11px] text-black-900_01 text-center text-sm w-[83px]"
-                              size="txtClashGroteskVariableSemiBold14Black90001"
-                            >
-                              Penthouse
-                            </Text>
-                            <Text
-                              className="bg-gray-200_01 h-[22px] justify-center px-[7px] rounded-[11px] text-black-900_01 text-center text-sm w-[70px]"
-                              size="txtClashGroteskVariableSemiBold14Black90001"
-                            >
-                              Ver todo
-                            </Text>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <Button className="bg-lime-A700 cursor-pointer font-clashdisplayvariable font-medium py-[9px] rounded-lg text-base text-center text-gray-50 w-[411px]">
-                      Aplicar
-                    </Button>
-                  </div> */}
-
+                  
                   <div className="flex flex-col">
                     <Img
                       className="mx-auto object-cover z-10"
@@ -234,7 +80,7 @@ const CabinsPage: React.FC = () => {
                   listCabins.map((value,index)=>
                     (
                       <CabinasComponent
-                        id={index}
+                        slug={value.slug}
                         name={value.name}
                         cover={value.images[0]}
                         images={value.images}
@@ -285,21 +131,7 @@ const CabinsPage: React.FC = () => {
                         © Uxability World. Todos los derechos reservados
                       </Text>
                       <div className="flex flex-row gap-6 items-center justify-start w-auto z-10">
-                        {/* <Img
-                          className="h-6 w-6"
-                          src="images/img_socialicon.svg"
-                          alt="socialicon"
-                        />
-                        <Img
-                          className="h-6 w-6"
-                          src="images/img_linkedin.svg"
-                          alt="linkedin"
-                        />
-                        <Img
-                          className="h-6 w-6"
-                          src="images/img_socialicon_blue_gray_300.svg"
-                          alt="socialicon_One"
-                        /> */}
+                      
                           <a href="https://instagram.com/cruise.festival?igshid=MzRlODBiNWFlZA==" target="_blank">
                             <img className="h-[26px] w-[26px] cursor-pointer"
                             src="images/img_camera.svg"

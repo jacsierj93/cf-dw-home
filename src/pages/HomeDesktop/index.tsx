@@ -27,10 +27,10 @@ const HomeDesktopPage: React.FC = () => {
       text:"¡Prepárate para una experiencia épica en alta mar! Cruise Festival es el crucero de lujo que lo tiene todo: espacios amplios, fiestas deslumbrantes y una personalidad que te dejará sin aliento. Desde elegantes restaurantes hasta bares exclusivos, cada rincón te sorprenderá. "
     },
     {
-      subTitle: 'Camarotes',
+      subTitle: 'Cabinas',
       title: 'La mejor comodidad ',
       image: 'camarotes.webp',
-      text:"Contamos con diversos camarotes, para que vivas esta experiencia como la quieres vivir, para que vayas con amigos a vivir la mejor experiencia de sus vidas, como también camarotes con vista panorámica para disfrutar en pareja.      ",
+      text:"Contamos con diversos cabinas, para que vivas esta experiencia como la quieres vivir, para que vayas con amigos a vivir la mejor experiencia de sus vidas, como también cabinas con vista panorámica para disfrutar en pareja.      ",
       
     },
     {
@@ -70,7 +70,7 @@ const HomeDesktopPage: React.FC = () => {
     {
       subTitle: 'Gastronomía',
       title: 'Comida Gourmet en Alta mar. ',
-      image: 'cf-gastronomia.jpg',
+      image: 'cf_gastronomy.jpg',
       text:"Desde sabores internacionales hasta delicias locales, cada bocado será una explosión de sabor mientras navegas hacia destinos increíbles."
     },
     {

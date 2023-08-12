@@ -13,7 +13,7 @@ const ProjectRoutes = () => {
           <Route path="*" element={<NotFound />} />
           <Route path="/homedesktop" element={<HomeDesktop />} />
           <Route path="/cabinas" element={<Cabins />}/>
-          <Route path="/cabina/:id" element={<CabinDetail />} />
+          <Route path="/cabina/:slug" element={<CabinDetail />} />
         </Routes>
       </Router>
     </React.Suspense>
