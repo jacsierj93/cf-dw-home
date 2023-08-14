@@ -45,6 +45,7 @@ const CabinsPage: React.FC = () => {
                 Ya sea que elijas un cabina interior acogedor o una suite con vista al mar, te garantizamos una experiencia de alojamiento excepcional. Descansa, relájate y alístate para volver a la fiesta.  Nuestro crucero de música electrónica te ofrece la mejor experiencia en alta mar. 
               </Text>
             }
+            background={{type:'image',sources:[{format:'jpg',source:'/images/cf_cabinas_bg.jpg'}]}}
           />
         </div>
 

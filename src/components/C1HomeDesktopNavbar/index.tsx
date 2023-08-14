@@ -1,62 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
 import { Text } from "components";
 
+import { useLocation } from "react-router-dom";
+
 type C1HomeDesktopNavbarProps = Omit<
   React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
   "hometext" | "cabinastext" | "lineuptext" | "influencersspontext"
-> &
-  Partial<{
-    hometext: string;
-    cabinastext: string;
-    lineuptext: string;
-    influencersspontext: string;
-  }>;
+>;
+
+  const menuItems = [
+    {
+      item:'Home',
+      tags: [''],
+      to:'/'
+    },
+    {
+      item:'Cabinas',
+      tags: ['cabinas','cabina'],
+      to: '/cabinas'
+    },
+    // {
+    //   item:'Home',
+    //   tags: ['']
+    // },
+    // {
+    //   item:'Home',
+    //   tags: ['']
+    // }
+  ]
 
 const C1HomeDesktopNavbar: React.FC<C1HomeDesktopNavbarProps> = (props) => {
+  const fullLocation = useLocation().pathname.split('/');
+
   return (
     <>
       <div className={props.className}>
-        <Text
-          className="text-lg text-lime-A700 w-auto"
-          size="txtClashGroteskVariableBold18"
-        >
-          <Link to="/">
-          {props?.hometext}
-          </Link>
-        </Text>
-        <Text
-          className="text-gray-50 text-lg w-auto"
-          size="txtClashGroteskVariableMedium18Gray50"
-        >
-          <Link to="/cabinas">
-          {props?.cabinastext}
-          </Link>
-        </Text>
-        <Text
-          className="text-gray-50 text-lg w-auto"
-          size="txtClashGroteskVariableMedium18Gray50"
-        >
-          {props?.lineuptext}
-        </Text>
-        <Text
-          className="text-gray-50 text-lg w-auto"
-          size="txtClashGroteskVariableMedium18Gray50"
-        >
-          {props?.influencersspontext}
-        </Text>
+        {
+          menuItems.map((item)=>(
+            
+          <Text
+            className={`text-lg text-gray-50  w-auto ${(item.tags.indexOf(fullLocation[1])>=0)?'text-lime-A700':''}`}
+            size="txtClashGroteskVariableBold18"
+          >
+            <Link to={item.to}>
+            {item.item}
+            </Link>
+          </Text>
+          ))
+        }
       </div>
     </>
   );
 };
 
-C1HomeDesktopNavbar.defaultProps = {
-  hometext: "Home",
-  cabinastext: "Cabinas",
-  lineuptext: "Line Up",
-  influencersspontext: "Embajadores & Sponsors",
-};
 
 export default C1HomeDesktopNavbar;

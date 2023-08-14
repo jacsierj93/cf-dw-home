@@ -83,21 +83,21 @@ const CabinasComponent: React.FC<CabinsProps> = (props) => {
                         Desde
                       </Text>
                       <Text
-                        className="text-2xl md:text-[22px] text-purple-600 text-right sm:text-xl w-auto"
+                        className="text-[22px] text-purple-600 text-right sm:text-xl w-auto"
                         size="txtMontserratBold24"
                       >
                         <span className="text-indigo-A100 font-clashgroteskvariable font-bold">
-                          ${props.price}
+                          USD {props.price}
                         </span>
                         <span className="text-indigo-A100 font-clashgroteskvariable text-sm font-bold">
-                          por persona
+                          
                         </span>
                       </Text>
                       <Text
                         className="text-lime-A700_9e text-right text-sm w-full"
                         size="txtClashDisplayVariableMedium14"
                       >
-                        + impuestos
+                        por persona
                       </Text>
                     </div>
                   </div>

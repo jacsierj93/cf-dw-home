@@ -77,7 +77,7 @@ const HomeDesktopPage: React.FC = () => {
       subTitle: 'Drinks',
       title: '3,2,1…. SHOT',
       image: 'cf-bebidas.jpg',
-      text:"En nuestro crucero temático podrás beber lo que quieras, desde cócteles hasta cerveza artesanal. La decisión es toda tuya. "
+      text:"Cuando hablamos de all inclusive, ES ALL INCLUSIVE, encontrarás bebidas alcohólicas y analcoholicas, la desicin es toda tuya."
     }
   ]
   const [ServicesOpen,toggleServices] = React.useState(false);
@@ -88,7 +88,6 @@ const HomeDesktopPage: React.FC = () => {
         <div className="relative font-clashgroteskvariable h-[694px] md:h-auto inset-x-[0] max-w-[1387px] mx-auto md:px-5 top-[0] w-full">
           
           <C1HomeDesktopImgcentral
-            className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] md:px-10 sm:px-5 w-full"
             style={{ backgroundImage: "url('images/img_imgcentral.png')" }}
             spantext={
               <Text className="font-bold leading-[90.00px] md:text-5xl text-6xl text-center text-gray-50">
@@ -240,7 +239,7 @@ const HomeDesktopPage: React.FC = () => {
                  <div className="px-[12px] max-w-[1387px] mx-auto">
                     <Img
                     className="h-auto object-cover w-full"
-                    src="images/Banner.png"
+                    src="images/collage_home.png"
                     alt="CruiseFestivalBanner"
                   />
                 </div>

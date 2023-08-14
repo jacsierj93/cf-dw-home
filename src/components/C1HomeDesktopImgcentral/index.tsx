@@ -10,6 +10,7 @@ type C1HomeDesktopImgcentralProps = Omit<
     spantext: JSX.Element | string;
     description: JSX.Element | string;
     buttontext: string;
+    background: {type: 'image' | 'video', sources: {format:string, source:string}[]}
   }>;
 
 const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
@@ -18,32 +19,38 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
   return (
     <>
       <div
-        className={props.className}
-        style={{ backgroundImage: "url('/images/img_imgcentral.png')" }}
+        className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] md:p-10 sm:p-5 w-full"
+        style={{ backgroundImage: (props.background.type != 'image')?"url('/images/img_imgcentral.png')":`url('${props.background.sources[0].source}')` }}
       >
-        <div className="w-full h-full object-cover absolute">
-            <video className="w-full max-w-none h-full object-cover" playsInline autoPlay muted loop id="video-desktop">
-              <source src="/images/cf_home.mp4" type="video/mp4"/>
-              Your browser does not support the video tag.
-            </video>
-        </div>
+        {
+          (props.background.type == 'video')?
+           <div className="w-full h-full object-cover absolute">
+              <video className="w-full max-w-none h-full object-cover" playsInline autoPlay muted loop id="video-desktop">
+                {
+                  props.background.sources.map((value)=>(
+                    <source src={value.source} type={value.format}/>
+                  ))
+                }
+                
+                Your browser does not support the video tag.
+              </video>
+          </div>: ''
+        }
+       
         <div className="bg-gray-900_7f flex flex-col gap-8 items-center justify-center p-12 md:px-10 sm:px-5 rounded-[10px] w-auto md:w-full z-10">
           {props?.spantext}
           {
             (typeof props?.description == 'string')?
-            (<Text
-              className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
-              size="txtClashGroteskVariableMedium28"
-            >
-              {props?.description}
-            </Text>)
+              (<Text
+                className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
+                size="txtClashGroteskVariableMedium28"
+              >
+                {props?.description}
+              </Text>)
             :props?.description
           }
           
         </div>
-        {/* <Button className="mt-8 bg-lime-A700 cursor-pointer font-clashdisplayvariable font-semibold py-3.5 rounded-lg text-base text-black-900 text-center w-[196px]">
-          {props?.buttontext}
-        </Button> */}
       </div>
     </>
   );
@@ -71,6 +78,15 @@ C1HomeDesktopImgcentral.defaultProps = {
   description:
     "La música del mundo es una mezcla ecléctica de sonidos tradicionales y contemporáneos de todo el planeta. Es una forma estupenda de explorar y apreciar diferentes culturas.",
   buttontext: "Reservar ahora",
+  background:{
+    type:'video',
+    sources:[
+      {
+        format:'video/mp4',
+        source:'/images/cf_home.mp4'
+      }
+    ]
+  }
 };
 
 export default C1HomeDesktopImgcentral;

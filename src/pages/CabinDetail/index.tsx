@@ -19,7 +19,8 @@ import 'react-awesome-slider/dist/styles.css';
 
 
 const getCabin = async (slug) => {
-  return listCabins.find((elem) => elem.slug = slug);
+  console.log(listCabins.find((elem) => elem.slug == slug));
+  return listCabins.find((elem) => elem.slug == slug);
 }
 const CabinsDetailsPage: React.FC = () => {
 
@@ -51,7 +52,7 @@ const CabinsDetailsPage: React.FC = () => {
           
           <C1HomeDesktopImgcentral
             className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] md:px-10 sm:px-5 w-full"
-            style={{ backgroundImage: "url('/images/img_imgcentral.png')" }}
+            
             spantext={
               <Text className="font-bold leading-[90.00px] md:text-5xl text-6xl text-center text-gray-50">
                 <span className="text-gray-50 font-clashgroteskvariable">
@@ -75,6 +76,7 @@ const CabinsDetailsPage: React.FC = () => {
                 Ya sea que elijas un cabina interior acogedor o una suite con vista al mar, te garantizamos una experiencia de alojamiento excepcional. Descansa, relájate y alístate para volver a la fiesta.  Nuestro crucero de música electrónica te ofrece la mejor experiencia en alta mar. 
               </Text>
             }
+            background={{type:'image',sources:[{format:'jpg',source:'/images/cf_cabinas_bg.jpg'}]}}
           />
         </div>
 
@@ -172,7 +174,7 @@ const CabinsDetailsPage: React.FC = () => {
                 </div>
                 </div>
             </div>
-            <div className="flex md:flex-col flex-row font-clashdisplayvariable gap-2 md:h-auto items-start justify-start max-w-[1392px] mb-3.5 w-full">
+            <div className="flex flex-col font-clashdisplayvariable gap-2 md:h-auto items-start justify-start max-w-[1392px] mb-3.5 w-full">
                 <div className="grid grid-rows-4 grid-flow-col gap-4 sm:hidden">
                     <div className="row-span-4 col-span-2">
                         <Img
@@ -222,6 +224,9 @@ const CabinsDetailsPage: React.FC = () => {
                     </div>
                   ):""
                 }
+                <p className="text-sm text-normal self-end">
+                  * Todas las imagenes son referenciales
+                </p>
                 
             </div>
             
@@ -285,14 +290,16 @@ const CabinsDetailsPage: React.FC = () => {
             >
               Recorrido del crucero
             </Text>
-            <Button className="bg-lime-A700 cursor-pointer font-clashdisplayvariable font-medium py-3.5 rounded-lg text-base text-black-900 text-center w-[196px]">
-              Ver en Google Maps
-            </Button>
           </div>
           <div className="flex flex-col items-start justify-start w-auto md:w-full">
             <Img
-              className="h-[450px] object-cover rounded-[16px]  w-[1232px] md:w-full"
-              src="/images/img_rectangle19.png"
+              className="h-[450px] object-cover rounded-[16px]  w-[1232px] md:w-full sm:hidden"
+              src="/images/mapa_desktop.jpg"
+              alt="rectangleNineteen"
+            />
+            <Img
+              className="h-[450px] object-cover rounded-[16px]  w-[1232px] md:w-full hidden sm:block"
+              src="/images/mapa_mobile.jpg"
               alt="rectangleNineteen"
             />
           </div>
