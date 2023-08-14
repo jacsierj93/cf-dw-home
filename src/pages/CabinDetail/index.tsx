@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Button, Img, Line, Text, List } from "components";
 import C1HomeDesktopDjcard from "components/C1HomeDesktopDjcard";
@@ -12,15 +12,15 @@ import Header from "components/Header";
 import ServicesSection from "components/ServicesSection/ServicesSection";
 import { Cabins, listCabins } from "utils/lists";
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import Footer from "components/Footer";
+import Stars from "components/Stars";
 
 
 const getCabin = async (slug) => {
-  console.log(listCabins.find((elem) => elem.slug == slug));
   return listCabins.find((elem) => elem.slug == slug);
 }
 const CabinsDetailsPage: React.FC = () => {
@@ -29,10 +29,23 @@ const CabinsDetailsPage: React.FC = () => {
   
   const [cabin, setCabin] = useState<Cabins | undefined>();
 
+  const [copyOk,setCopyOk] = useState(false);
+
+  const target = useRef(null);
+
   useEffect(()=>{
     getCabin(slug).then((cabina)=>setCabin(cabina));
-    console.log(cabin)
   },[])
+
+  const executeScroll = () => target.current.scrollIntoView();
+  
+  const copyText = () => {
+    navigator.clipboard.writeText(window.location.href)
+    setCopyOk(true);
+    setTimeout(()=>{
+      setCopyOk(false)
+    },2000)
+  }
 
   const listFeatures : string[] = [
     "Outdoor pool",
@@ -48,6 +61,9 @@ const CabinsDetailsPage: React.FC = () => {
   return (
     <>
       <div className="bg-gray-900 font-clashdisplayvariable mx-auto pt-[26px] relative w-full h-full">
+      <div className={`p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 fixed top-[60px] right-[40px] sm:top-[30px] sm:right-[20px] z-30 ${(!copyOk)?'hidden':''}`}>
+        Copiado al portapapeles
+      </div>
         <Header/>
         <div className="relative font-clashgroteskvariable h-[694px] md:h-auto inset-x-[0] max-w-[1387px] mx-auto md:px-5 top-[0] w-full">
           
@@ -74,7 +90,8 @@ const CabinsDetailsPage: React.FC = () => {
                 className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
                 size="txtClashGroteskVariableMedium28"
               >
-                Ya sea que elijas un cabina interior acogedor o una suite con vista al mar, te garantizamos una experiencia de alojamiento excepcional. Descansa, relájate y alístate para volver a la fiesta.  Nuestro crucero de música electrónica te ofrece la mejor experiencia en alta mar. 
+                
+                Elige entre una cabina interior para poder desconectarte o una suite con vista panorámica al mar, y prepárate para una experiencia inolvidable. Recarga energías y regresa a la pista de baile. En nuestro crucero de música electrónica experimentaras la mejor sensación de estar en ALTA mar, donde la fiesta nunca se detiene.
               </Text>
             }
             background={{type:'image',sources:[{format:'jpg',source:'/images/cf_cabinas_bg.jpg'}]}}
@@ -89,50 +106,20 @@ const CabinsDetailsPage: React.FC = () => {
           <div className="bg-gradient7  flex flex-col gap-[27px] items-center justify-start p-[15px] w-full">
             <div className="flex sm:flex-col flex-row md:gap-10 items-center justify-between max-w-[1408px] mt-[17px] px-4 w-full">
                 <div className="flex md:flex-1 flex-col gap-4 items-start justify-start w-auto md:w-full sm:items-center">
-                <div className="flex md:flex-col flex-row gap-4 items-end md:items-start justify-start w-auto md:w-full">
+                <div className="flex md:flex-col flex-row gap-4 items-center md:items-start sm:items-center justify-start w-auto md:w-full">
                     <Text
-                    className="text-5xl sm:text-[38px] md:text-[44px] text-gray-50 w-auto sm:text-center"
-                    size="txtClashGroteskVariableBold48"
-                    >
-                    <>{cabin?.name}</>
+                      className="text-5xl sm:text-[38px] md:text-[44px] text-gray-50 w-auto sm:text-center"
+                      size="txtClashGroteskVariableBold48"
+                      >
+                      <>{cabin?.name}</>
                     </Text>
-                    <div className="flex sm:flex-col flex-row font-clashdisplayvariable gap-8 items-start justify-start w-auto sm:w-full sm:items-center">
-                    <div className="flex flex-row gap-1 items-center justify-start w-auto">
-                        <div className="flex flex-row items-start justify-start w-auto">
-                        <Img
-                            className="h-4 w-4"
-                            src="/images/img_star.svg"
-                            alt="star"
-                        />
-                        <Img
-                            className="h-4 w-4"
-                            src="/images/img_star.svg"
-                            alt="star_One"
-                        />
-                        <Img
-                            className="h-4 w-4"
-                            src="/images/img_star.svg"
-                            alt="star_Two"
-                        />
-                        <Img
-                            className="h-4 w-4"
-                            src="/images/img_star.svg"
-                            alt="star_Three"
-                        />
-                        <Img
-                            className="h-4 w-4"
-                            src="/images/img_star.svg"
-                            alt="star_Four"
-                        />
-                        </div>
-                        <Text
-                        className="text-base text-gray-50 w-auto"
-                        size="txtClashDisplayVariableMedium16Gray50"
-                        >
-                        Estadía All Inclusive
-                        </Text>
-                    </div>
-                  
+                    
+                    <div className="flex flex-col grow">
+
+                      <Stars description={cabin?.mini_desc}/>
+
+                      <Stars description="Estadía All Inclusive"/>
+                      <Stars description={`All Inclusive Drinks ${(cabin?.slug == 'cruise-festival-suite-vip')?' En ALTA':''}`}/>
                     </div>
                 </div>
                 
@@ -160,7 +147,7 @@ const CabinsDetailsPage: React.FC = () => {
                     >
                     <div className="flex flex-col items-start justify-start w-full">
                         <Button className="border border-gray-50 border-solid flex h-12 items-center justify-center p-3.5 rounded w-12"
-                        onClick={()=>navigator.clipboard.writeText(window.location.href)}>
+                        onClick={copyText}>
                         <Img
                             className="h-5"
                             src="/images/img_search.svg"
@@ -169,7 +156,7 @@ const CabinsDetailsPage: React.FC = () => {
                         </Button>
                     </div>
                     </List>
-                    <Button className="bg-lime-A700 cursor-pointer font-medium py-3.5 rounded-lg text-base text-black-900 text-center w-[196px]">
+                    <Button className="bg-lime-A700 cursor-pointer font-medium py-3.5 rounded-lg text-base text-black-900 text-center w-[196px]" onClick={executeScroll}>
                     Reservar ahora
                     </Button>
                 </div>
@@ -226,7 +213,7 @@ const CabinsDetailsPage: React.FC = () => {
                   ):""
                 }
                 <p className="text-sm text-normal self-end">
-                  * Todas las imagenes son referenciales
+                  * Todas las imágenes son referenciales
                 </p>
                 
             </div>
@@ -275,12 +262,26 @@ const CabinsDetailsPage: React.FC = () => {
                         </div>
                     </div>
                 </div>
+                <div className="flex w-full max-w-[1302px] items-left justify-left">
+                   <div className="w-auto  flex  self-left mt-[20px] bg-gray-900_bf p-[12px] rounded-[12px]">
+                    <Link to="/cabinas">
+                      <Text
+                          className="text-xl text-semibold text-gray-50_01 w-auto cursor-pointer"
+                          size="txtClashGroteskVariableBold32"
+                      >
+                          {"< "}Más Cabinas
+                      </Text>
+                    </Link>
+                    
+                  </div>
+                </div>
+               
               </div>
 
               
               
         </div>
-        <div className="bg-gradient7 w-full min-h-[493px]">
+        <div ref={target} className="bg-gradient7 w-full min-h-[493px]">
                 
         </div>
         <div className="flex flex-col gap-8 items-start justify-start max-w-[1256px] mt-[32px] mx-auto md:px-[20px]  w-full">
@@ -294,12 +295,12 @@ const CabinsDetailsPage: React.FC = () => {
           </div>
           <div className="flex flex-col items-start justify-start w-auto md:w-full">
             <Img
-              className="h-[450px] object-cover rounded-[16px]  w-[1232px] md:w-full sm:hidden"
+              className="h-auto object-cover rounded-[16px]  w-[1232px] md:w-full sm:hidden"
               src="/images/mapa_desktop.jpg"
               alt="rectangleNineteen"
             />
             <Img
-              className="h-[450px] object-cover rounded-[16px]  w-[1232px] md:w-full hidden sm:block"
+              className="h-auto object-cover rounded-[16px]  w-[1232px] md:w-full hidden sm:block"
               src="/images/mapa_mobile.jpg"
               alt="rectangleNineteen"
             />

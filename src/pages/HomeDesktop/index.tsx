@@ -64,8 +64,8 @@ const HomeDesktopPage: React.FC = () => {
   const listMoods: Services[] = [
     {
       subTitle: 'Shows',
-      title: 'Shows en vivo de los mejores Djs Internacionales. ',
-      image: 'cf-dj.jpg',
+      title: 'Shows en vivo de los mejores Djs Nacionales e Internacionales. ',
+      image: 'cf_dj_list.jpg',
       text:"¡Imagina esto! Estás a bordo de un crucero y de repente comienzas a escuchar la música de tu DJ favorito. En Cruise Festival, nada se nos escapa. "
     },
     {
@@ -78,7 +78,7 @@ const HomeDesktopPage: React.FC = () => {
       subTitle: 'Drinks',
       title: '3,2,1…. SHOT',
       image: 'cf-bebidas.jpg',
-      text:"Cuando hablamos de all inclusive, ES ALL INCLUSIVE, encontrarás bebidas alcohólicas y analcoholicas, la desicin es toda tuya."
+      text:"Cuando hablamos de all inclusive, ES ALL INCLUSIVE, encontrarás bebidas alcohólicas y analcohólicas, la decisión es toda tuya."
     }
   ]
   const [ServicesOpen,toggleServices] = React.useState(false);
@@ -230,7 +230,7 @@ const HomeDesktopPage: React.FC = () => {
               style={{backgroundImage:"url('images/CF-Figura onda expansiva.svg')"}}>
                  <div className="px-[12px] max-w-[1387px] mx-auto">
                     <Img
-                    className="h-auto object-cover w-full"
+                    className="h-auto object-cover rounded-[12px] w-full"
                     src="images/collage_home.png"
                     alt="CruiseFestivalBanner"
                   />

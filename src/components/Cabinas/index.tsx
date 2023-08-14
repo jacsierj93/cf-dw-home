@@ -18,7 +18,7 @@ const CabinasComponent: React.FC<CabinsProps> = (props) => {
             <div className="flex sm:flex-col flex-row items-start justify-start my-0 shadow-bs3 w-auto sm:w-full sm:max-w-screen-sm md:px-[20px]">
                 <div className="relative w-[36%] sm:w-full">
                   <Img
-                    className=" m-auto object-cover rounded-bl-[12px] sm:rounded-bl-none  rounded-tl-[12px]  sm:rounded-tr-[12px] w-[300px] h-[235px] sm:w-full sm:h-full "
+                    className=" m-auto object-cover rounded-bl-[12px] sm:rounded-bl-none  rounded-tl-[12px]  sm:rounded-tr-[12px] w-[300px] h-[268px] sm:w-full sm:h-full "
                     src={"images/"+props.cover}
                     alt={props.name}
                   />
@@ -73,6 +73,43 @@ const CabinasComponent: React.FC<CabinsProps> = (props) => {
                             </Text>
                           </div>
                         </div>
+                        <div className="flex flex-row gap-8 sm:gap-0 items-start justify-start w-auto">
+                          <div className="flex flex-row gap-1 sm:gap-5 items-center justify-start w-auto">
+                            <div className="flex flex-row items-start justify-start w-auto">
+                              <Img
+                                className="h-4 w-4"
+                                src="images/img_star.svg"
+                                alt="star"
+                              />
+                              <Img
+                                className="h-4 w-4"
+                                src="images/img_star.svg"
+                                alt="star_One"
+                              />
+                              <Img
+                                className="h-4 w-4"
+                                src="images/img_star.svg"
+                                alt="star_Two"
+                              />
+                              <Img
+                                className="h-4 w-4"
+                                src="images/img_star.svg"
+                                alt="star_Three"
+                              />
+                              <Img
+                                className="h-4 w-4"
+                                src="images/img_star.svg"
+                                alt="star_Four"
+                              />
+                            </div>
+                            <Text
+                              className="text-gray-50 text-xs w-auto"
+                              size="txtMontserratMedium12"
+                            >
+                              All Inclusive Drinks {(props.slug == 'cruise-festival-suite-vip')?' En ALTA':''}
+                            </Text>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div className="flex flex-col items-end justify-start w-auto">
@@ -86,15 +123,15 @@ const CabinasComponent: React.FC<CabinsProps> = (props) => {
                         className="text-[22px] text-purple-600 text-right sm:text-xl w-auto"
                         size="txtMontserratBold24"
                       >
-                        <span className="text-indigo-A100 font-clashgroteskvariable font-bold">
+                        <span className="text-indigo-A100 font-clashgroteskvariable font-bold text-left">
                           USD {props.price}
                         </span>
-                        <span className="text-indigo-A100 font-clashgroteskvariable text-sm font-bold">
+                        {/* <span className="text-indigo-A100 font-clashgroteskvariable text-sm font-bold">
                           
-                        </span>
+                        </span> */}
                       </Text>
                       <Text
-                        className="text-lime-A700_9e text-right text-sm w-full"
+                        className="text-lime-A700_9e sm:text-right text-sm w-full "
                         size="txtClashDisplayVariableMedium14"
                       >
                         por persona
