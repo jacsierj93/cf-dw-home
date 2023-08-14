@@ -9,6 +9,7 @@ import C1HomeDesktopRowcrucero from "components/C1HomeDesktopRowcrucero";
 import C1HomeDesktopRowsubheading from "components/C1HomeDesktopRowsubheading";
 import Header from "components/Header";
 import ServicesSection from "components/ServicesSection/ServicesSection";
+import Footer from "components/Footer";
 
 export type Services = {
   subTitle: string,
@@ -198,12 +199,6 @@ const HomeDesktopPage: React.FC = () => {
                       <span className="text-gray-900 font-clashgroteskvariable text-left">
                       {service.title}
                       </span>
-                      {/* <span className="text-gray-50 font-clashgroteskvariable text-left">
-                        {" "}
-                      </span>
-                      <span className="text-indigo-A100 font-clashgroteskvariable text-left">
-                        primer nivel
-                      </span> */}
                     </Text>
                   }
                 />
@@ -217,9 +212,6 @@ const HomeDesktopPage: React.FC = () => {
                     cssImg={service.extraCss}
                     headingOne={
                       <Text className="font-bold sm:text-2xl md:text-[26px] text-[28px] text-indigo-A100 w-auto">
-                        {/* <span className="text-indigo-A100 font-clashgroteskvariable text-left">
-                          Relájate{" "}
-                        </span> */}
                         <span className="text-gray-900 font-clashgroteskvariable text-left">
                           {service.title}
                         </span>
@@ -306,93 +298,17 @@ const HomeDesktopPage: React.FC = () => {
                   
                 </div>
               </div>
-            <div className="relative py-[12px] px-[24px] bg-black max-w-[1387px] mx-auto z-10">
+            <div className="relative py-[12px] px-[24px] bg-black max-w-[1387px] mx-auto">
               <Img
-                  className="h-auto object-cover w-full"
-                  src="images/CruiseFestivalAltoLineUp.png"
-                  alt="CruiseFestivalBanner"
+                  className="h-auto object-cover w-full rounded-[12px]"
+                  src="images/cf_dj.jpg"
+                  alt="cruise festival lineup"
                 />
             </div>
 
-            <div className="relative bottom-[0] flex flex-col font-inter md:gap-10 gap-16 h-[786px] md:h-auto inset-x-[0] items-center justify-end  max-w-[1387px] mx-auto pb-12 pt-16 w-full">
-              <Img
-                  className="absolute h-[786px] sm:h-auto md:h-full md:w-full mx-auto object-cover"
-                  src="images/img_bgfiguraonda.png"
-                  alt="bgfiguraonda"
-                />
-                  <div className="flex flex-col items-start justify-start max-w-7xl sm:px-5 px-8 w-full z-10">
-                    <div className="flex flex-col items-start justify-start w-full">
-                      <div className="flex flex-col gap-8 items-start justify-start w-full">
-                        <div className="flex flex-col items-center justify-start w-[28%] md:w-full md:w-auto">
-                          <Img
-                            className="h-[95px] md:h-[65px] md:h-auto object-cover w-full"
-                            src="images/img_logocruisefestivalmesa.png"
-                            alt="logocruisefesti_One"
-                          />
-                        </div>
-                        <div className="flex flex-col items-start justify-start w-80">
-                          <Text
-                            className="leading-[24.00px] md:max-w-full max-w-xs text-base text-gray-50"
-                            size="txtInterRegular16"
-                          >
-                            Sumate a la experiencia que va a ser un antes y un
-                            después en tu vida!
-                          </Text>
-                        </div>
-                       
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-8 items-start justify-start sm:px-5 px-8 w-auto md:w-full">
-                    <div className="flex flex-row gap-8 items-center justify-start w-full">
-                      <Text
-                        className="flex-1 text-base text-blue_gray-300 w-auto"
-                        size="txtInterRegular16Bluegray300"
-                      >
-                        © Uxability World. Todos los derechos reservados
-                      </Text>
-                      <div className="flex flex-row gap-6 items-center justify-start w-auto z-10">
-                        {/* <Img
-                          className="h-6 w-6"
-                          src="images/img_socialicon.svg"
-                          alt="socialicon"
-                        />
-                        <Img
-                          className="h-6 w-6"
-                          src="images/img_linkedin.svg"
-                          alt="linkedin"
-                        />
-                        <Img
-                          className="h-6 w-6"
-                          src="images/img_socialicon_blue_gray_300.svg"
-                          alt="socialicon_One"
-                        /> */}
-                          <a href="https://instagram.com/cruise.festival?igshid=MzRlODBiNWFlZA==" target="_blank">
-                            <img className="h-[26px] w-[26px] cursor-pointer"
-                            src="images/img_camera.svg"
-                            alt="camera"/>
-                          </a>
-                          <a href="https://open.spotify.com/user/31yrnfwmobp5omwu7dyn37rsxxri?si=tvj-hXr0SaODAADBkucUpA" target="_blank">
-                            <img className="h-[24px] w-[24px] cursor-pointer"
-                            src="images/spotify.png"
-                            alt="spotify"/>
-                          </a>
-                          <a href="https://www.tiktok.com/@cruise.festival?_t=8eXZM7eVrMr&_r=1" target="_blank">
-                            <img className="h-[24px] w-[24px] cursor-pointer"
-                            src="images/tik-tok.png"
-                            alt="tiktok"/>
-                          </a>
-                          <a href="mailto:Info@cruise-festival.com" target="_blank">
-                            <img className="h-[26px] w-[26px] cursor-pointer"
-                            src="images/email.png"
-                            alt="mail"/>
-                          </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <Footer/>
             
-            </div>
+          </div>
             
       </div>
 

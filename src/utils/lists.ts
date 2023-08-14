@@ -62,12 +62,13 @@ export const listCabins: Cabins[] = [
       ]
     },
     {
-      images: [
+    images: [
         'cf_cab_balc.webp',
         'cabinas/cf_cab_balcon1.webp',
         'cabinas/cf_cab_balcon2.webp',
         'cabinas/cf_cab_balcon3.webp',
-        'cabinas/cf_cab_balcon4.jpg'
+        'cabinas/cf_cab_balcon4.jpg',
+        'cabinas/cf_cab_balcon5.jpg'
     ],
       name: 'Externa con Balcón - Deep Blue Triton',
       slug: 'cruise-festival-cabina-balcon',
