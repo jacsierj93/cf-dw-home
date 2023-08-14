@@ -67,7 +67,7 @@ const CabinsPage: React.FC = () => {
                   <div className="flex flex-col">
                     <Img
                       className="mx-auto object-cover z-10"
-                      src="/images/banner_cabinas.jpg"
+                      src="https://i.imgur.com/L4Boasb.jpg"
                       alt="banner cabinas"
                     />
                   </div>
