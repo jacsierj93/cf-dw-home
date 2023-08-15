@@ -73,9 +73,14 @@ const Footer: React.FC<{}> = (props) => {
                     alt="spotify"/>
                     </a>
                     <a href="https://www.tiktok.com/@cruise.festival?_t=8eXZM7eVrMr&_r=1" target="_blank">
-                    <img className="h-[24px] w-[24px] cursor-pointer"
-                    src="/images/tik-tok.png"
-                    alt="tiktok"/>
+                        <img className="h-[24px] w-[24px] cursor-pointer"
+                        src="/images/tik-tok.png"
+                        alt="tiktok"/>
+                    </a>
+                    <a href="https://www.linkedin.com/company/cruise-festival/" target="_blank">
+                        <img className="h-[24px] w-[24px] cursor-pointer"
+                        src="/images/linkedin.png"
+                        alt="linkedin"/>
                     </a>
                     <a href="mailto:Info@cruise-festival.com" target="_blank">
                         <img className="h-[26px] w-[26px] cursor-pointer"

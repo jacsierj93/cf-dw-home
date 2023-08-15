@@ -142,6 +142,16 @@ const CabinsDetailsPage: React.FC = () => {
                       <span className="text-gray-50_fa font-clashgroteskvariable text-base font-bold">
                       {" "} por persona
                       </span>
+                      <br/>
+                      
+                  </Text>
+                  <Text
+                    className="text-[8px] leading-[10px] text-gray-50_fa text-right w-auto text-light"
+                  >
+                    Cruise Festival no incluye:<br/>
+                    impuesto portuario.<br/>
+                    Tasas de servicios.<br/>
+                    Valor: USD 175
                   </Text>
                 <div className="flex flex-row font-clashdisplayvariable gap-[15px] items-center justify-center w-full">
                     <List
