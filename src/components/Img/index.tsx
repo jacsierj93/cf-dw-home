@@ -25,7 +25,6 @@ const Img: React.FC<React.PropsWithChildren<ImgProps>> = ({
       src={src}
       alt={alt}
       {...restProps}
-      loading={"lazy"}
     />
   );
 };

@@ -1,14 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-import { Button, Img, Line, Text } from "components";
-import C1HomeDesktopDjcard from "components/C1HomeDesktopDjcard";
-import C1HomeDesktopFooterlink from "components/C1HomeDesktopFooterlink";
+import { Img, Text } from "components";
 import C1HomeDesktopImgcentral from "components/C1HomeDesktopImgcentral";
-import C1HomeDesktopNavbar from "components/C1HomeDesktopNavbar";
 import C1HomeDesktopRowcrucero from "components/C1HomeDesktopRowcrucero";
 import C1HomeDesktopRowsubheading from "components/C1HomeDesktopRowsubheading";
 import Header from "components/Header";
 import ServicesSection from "components/ServicesSection/ServicesSection";
+import Footer from "components/Footer";
 
 export type Services = {
   subTitle: string,
@@ -19,6 +17,10 @@ export type Services = {
 }
 
 const HomeDesktopPage: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const listServices: Services[] = [
     {
       subTitle: 'El crucero',
@@ -30,7 +32,7 @@ const HomeDesktopPage: React.FC = () => {
       subTitle: 'Cabinas',
       title: 'La mejor comodidad ',
       image: 'camarotes.webp',
-      text:"Contamos con diversos cabinas, para que vivas esta experiencia como la quieres vivir, para que vayas con amigos a vivir la mejor experiencia de sus vidas, como también cabinas con vista panorámica para disfrutar en pareja.      ",
+      text:"Contamos con diversas cabinas, para que vivas esta experiencia como la quieres vivir, para que vayas con amigos a vivir la mejor experiencia de sus vidas, como también cabinas con vista panorámica para disfrutar en pareja.      ",
       
     },
     {
@@ -44,7 +46,7 @@ const HomeDesktopPage: React.FC = () => {
       subTitle: 'Fiestas y Djs Non-stop',
       title: '72 hs de diversión.',
       image: 'cf_fiesta.jpg',
-      text:"¡Fiesta sin fin con DJs de alta gama! Disfruta de música vibrante, ambientes enérgicos y noches llenas de diversión ininterrumpida en alta mar. 72 hs sin parar, a todo volúmen con personas como tú"
+      text:"¡Fiesta sin fin con DJs de alta gama! Disfruta de música vibrante, ambientes enérgicos y noches llenas de diversión ininterrumpida en alta mar. 72 hs sin parar, a todo volumen con personas como tú."
     },
     {
       subTitle: 'Spa',
@@ -63,8 +65,8 @@ const HomeDesktopPage: React.FC = () => {
   const listMoods: Services[] = [
     {
       subTitle: 'Shows',
-      title: 'Shows en vivo de los mejores Djs Internacionales. ',
-      image: 'cf-dj.jpg',
+      title: 'Shows en vivo de los mejores Djs Nacionales e Internacionales. ',
+      image: 'cf_dj_list.jpg',
       text:"¡Imagina esto! Estás a bordo de un crucero y de repente comienzas a escuchar la música de tu DJ favorito. En Cruise Festival, nada se nos escapa. "
     },
     {
@@ -77,7 +79,7 @@ const HomeDesktopPage: React.FC = () => {
       subTitle: 'Drinks',
       title: '3,2,1…. SHOT',
       image: 'cf-bebidas.jpg',
-      text:"En nuestro crucero temático podrás beber lo que quieras, desde cócteles hasta cerveza artesanal. La decisión es toda tuya. "
+      text:"Cuando hablamos de all inclusive, ES ALL INCLUSIVE, encontrarás bebidas alcohólicas y analcohólicas, la decisión es toda tuya."
     }
   ]
   const [ServicesOpen,toggleServices] = React.useState(false);
@@ -88,7 +90,6 @@ const HomeDesktopPage: React.FC = () => {
         <div className="relative font-clashgroteskvariable h-[694px] md:h-auto inset-x-[0] max-w-[1387px] mx-auto md:px-5 top-[0] w-full">
           
           <C1HomeDesktopImgcentral
-            className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] md:px-10 sm:px-5 w-full"
             style={{ backgroundImage: "url('images/img_imgcentral.png')" }}
             spantext={
               <Text className="font-bold leading-[90.00px] md:text-5xl text-6xl text-center text-gray-50">
@@ -199,12 +200,6 @@ const HomeDesktopPage: React.FC = () => {
                       <span className="text-gray-900 font-clashgroteskvariable text-left">
                       {service.title}
                       </span>
-                      {/* <span className="text-gray-50 font-clashgroteskvariable text-left">
-                        {" "}
-                      </span>
-                      <span className="text-indigo-A100 font-clashgroteskvariable text-left">
-                        primer nivel
-                      </span> */}
                     </Text>
                   }
                 />
@@ -218,9 +213,6 @@ const HomeDesktopPage: React.FC = () => {
                     cssImg={service.extraCss}
                     headingOne={
                       <Text className="font-bold sm:text-2xl md:text-[26px] text-[28px] text-indigo-A100 w-auto">
-                        {/* <span className="text-indigo-A100 font-clashgroteskvariable text-left">
-                          Relájate{" "}
-                        </span> */}
                         <span className="text-gray-900 font-clashgroteskvariable text-left">
                           {service.title}
                         </span>
@@ -239,8 +231,8 @@ const HomeDesktopPage: React.FC = () => {
               style={{backgroundImage:"url('images/CF-Figura onda expansiva.svg')"}}>
                  <div className="px-[12px] max-w-[1387px] mx-auto">
                     <Img
-                    className="h-auto object-cover w-full"
-                    src="images/Banner.png"
+                    className="h-auto object-cover rounded-[12px] w-full"
+                    src="images/collage_home.png"
                     alt="CruiseFestivalBanner"
                   />
                 </div>
@@ -307,93 +299,17 @@ const HomeDesktopPage: React.FC = () => {
                   
                 </div>
               </div>
-            <div className="relative py-[12px] px-[24px] bg-black max-w-[1387px] mx-auto z-10">
+            <div className="relative py-[12px] px-[24px] bg-black max-w-[1387px] mx-auto">
               <Img
-                  className="h-auto object-cover w-full"
-                  src="images/CruiseFestivalAltoLineUp.png"
-                  alt="CruiseFestivalBanner"
+                  className="h-auto object-cover w-full rounded-[12px]"
+                  src="images/cf_dj.jpg"
+                  alt="cruise festival lineup"
                 />
             </div>
 
-            <div className="relative bottom-[0] flex flex-col font-inter md:gap-10 gap-16 h-[786px] md:h-auto inset-x-[0] items-center justify-end  max-w-[1387px] mx-auto pb-12 pt-16 w-full">
-              <Img
-                  className="absolute h-[786px] sm:h-auto md:h-full md:w-full mx-auto object-cover"
-                  src="images/img_bgfiguraonda.png"
-                  alt="bgfiguraonda"
-                />
-                  <div className="flex flex-col items-start justify-start max-w-7xl sm:px-5 px-8 w-full z-10">
-                    <div className="flex flex-col items-start justify-start w-full">
-                      <div className="flex flex-col gap-8 items-start justify-start w-full">
-                        <div className="flex flex-col items-center justify-start w-[28%] md:w-full md:w-auto">
-                          <Img
-                            className="h-[95px] md:h-[65px] md:h-auto object-cover w-full"
-                            src="images/img_logocruisefestivalmesa.png"
-                            alt="logocruisefesti_One"
-                          />
-                        </div>
-                        <div className="flex flex-col items-start justify-start w-80">
-                          <Text
-                            className="leading-[24.00px] md:max-w-full max-w-xs text-base text-gray-50"
-                            size="txtInterRegular16"
-                          >
-                            Sumate a la experiencia que va a ser un antes y un
-                            después en tu vida!
-                          </Text>
-                        </div>
-                       
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-8 items-start justify-start sm:px-5 px-8 w-auto md:w-full">
-                    <div className="flex flex-row gap-8 items-center justify-start w-full">
-                      <Text
-                        className="flex-1 text-base text-blue_gray-300 w-auto"
-                        size="txtInterRegular16Bluegray300"
-                      >
-                        © Uxability World. Todos los derechos reservados
-                      </Text>
-                      <div className="flex flex-row gap-6 items-center justify-start w-auto z-10">
-                        {/* <Img
-                          className="h-6 w-6"
-                          src="images/img_socialicon.svg"
-                          alt="socialicon"
-                        />
-                        <Img
-                          className="h-6 w-6"
-                          src="images/img_linkedin.svg"
-                          alt="linkedin"
-                        />
-                        <Img
-                          className="h-6 w-6"
-                          src="images/img_socialicon_blue_gray_300.svg"
-                          alt="socialicon_One"
-                        /> */}
-                          <a href="https://instagram.com/cruise.festival?igshid=MzRlODBiNWFlZA==" target="_blank">
-                            <img className="h-[26px] w-[26px] cursor-pointer"
-                            src="images/img_camera.svg"
-                            alt="camera"/>
-                          </a>
-                          <a href="https://open.spotify.com/user/31yrnfwmobp5omwu7dyn37rsxxri?si=tvj-hXr0SaODAADBkucUpA" target="_blank">
-                            <img className="h-[24px] w-[24px] cursor-pointer"
-                            src="images/spotify.png"
-                            alt="spotify"/>
-                          </a>
-                          <a href="https://www.tiktok.com/@cruise.festival?_t=8eXZM7eVrMr&_r=1" target="_blank">
-                            <img className="h-[24px] w-[24px] cursor-pointer"
-                            src="images/tik-tok.png"
-                            alt="tiktok"/>
-                          </a>
-                          <a href="mailto:Info@cruise-festival.com" target="_blank">
-                            <img className="h-[26px] w-[26px] cursor-pointer"
-                            src="images/email.png"
-                            alt="mail"/>
-                          </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <Footer/>
             
-            </div>
+          </div>
             
       </div>
 
