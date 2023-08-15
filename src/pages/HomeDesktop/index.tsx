@@ -45,7 +45,7 @@ const HomeDesktopPage: React.FC = () => {
       subTitle: 'Fiestas y Djs Non-stop',
       title: '72 hs de diversión.',
       image: 'cf_fiesta.jpg',
-      text:"¡Fiesta sin fin con DJs de alta gama! Disfruta de música vibrante, ambientes enérgicos y noches llenas de diversión ininterrumpida en alta mar. 72 hs sin parar, a todo volúmen con personas como tú"
+      text:"¡Fiesta sin fin con DJs de alta gama! Disfruta de música vibrante, ambientes enérgicos y noches llenas de diversión ininterrumpida en alta mar. 72 hs sin parar, a todo volúmen con personas como tú."
     },
     {
       subTitle: 'Spa',

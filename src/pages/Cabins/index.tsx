@@ -44,7 +44,7 @@ const CabinsPage: React.FC = () => {
                 size="txtClashGroteskVariableMedium28"
               >
                 
-                Elige entre una cabina interior para poder desconectarte o una suite con vista panorámica al mar, y prepárate para una experiencia inolvidable. Recarga energías y regresa a la pista de baile. En nuestro crucero de música electrónica experimentaras la mejor sensación de estar en ALTA mar, donde la fiesta nunca se detiene.
+                Elige entre una cabina interior para poder desconectarte o una suite con vista panorámica al mar, y prepárate para una experiencia inolvidable. Recarga energías y regresa a la pista de baile. En nuestro crucero de música electrónica experimentarás la mejor sensación de estar en ALTA mar, donde la fiesta nunca se detiene.
               </Text>
             }
             background={{type:'image',sources:[{format:'jpg',source:'/images/cf_cabinas_bg.jpg'}]}}
