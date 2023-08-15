@@ -24,6 +24,9 @@ const getCabin = async (slug) => {
   return listCabins.find((elem) => elem.slug == slug);
 }
 const CabinsDetailsPage: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const {slug} = useParams(); 
   

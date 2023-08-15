@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Button, Img, Line, Text } from "components";
 import C1HomeDesktopDjcard from "components/C1HomeDesktopDjcard";
@@ -20,6 +20,10 @@ export type Services = {
 }
 
 const HomeDesktopPage: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const listServices: Services[] = [
     {
       subTitle: 'El crucero',
@@ -31,7 +35,7 @@ const HomeDesktopPage: React.FC = () => {
       subTitle: 'Cabinas',
       title: 'La mejor comodidad ',
       image: 'camarotes.webp',
-      text:"Contamos con diversos cabinas, para que vivas esta experiencia como la quieres vivir, para que vayas con amigos a vivir la mejor experiencia de sus vidas, como también cabinas con vista panorámica para disfrutar en pareja.      ",
+      text:"Contamos con diversas cabinas, para que vivas esta experiencia como la quieres vivir, para que vayas con amigos a vivir la mejor experiencia de sus vidas, como también cabinas con vista panorámica para disfrutar en pareja.      ",
       
     },
     {
@@ -45,7 +49,7 @@ const HomeDesktopPage: React.FC = () => {
       subTitle: 'Fiestas y Djs Non-stop',
       title: '72 hs de diversión.',
       image: 'cf_fiesta.jpg',
-      text:"¡Fiesta sin fin con DJs de alta gama! Disfruta de música vibrante, ambientes enérgicos y noches llenas de diversión ininterrumpida en alta mar. 72 hs sin parar, a todo volúmen con personas como tú."
+      text:"¡Fiesta sin fin con DJs de alta gama! Disfruta de música vibrante, ambientes enérgicos y noches llenas de diversión ininterrumpida en alta mar. 72 hs sin parar, a todo volumen con personas como tú."
     },
     {
       subTitle: 'Spa',

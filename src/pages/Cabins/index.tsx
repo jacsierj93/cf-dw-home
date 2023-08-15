@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Button, Img, Line, Text, List } from "components";
 import C1HomeDesktopDjcard from "components/C1HomeDesktopDjcard";
@@ -14,6 +14,9 @@ import { listCabins } from "utils/lists";
 import Footer from "components/Footer";
 
 const CabinsPage: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
       <div className="bg-gray-900 font-clashdisplayvariable mx-auto pt-[26px] relative w-full h-full">
