@@ -1,15 +1,9 @@
 import React, { useEffect } from "react";
 
-import { Button, Img, Line, Text, List } from "components";
-import C1HomeDesktopDjcard from "components/C1HomeDesktopDjcard";
-import C1HomeDesktopFooterlink from "components/C1HomeDesktopFooterlink";
+import { Img, Text, List } from "components";
 import C1HomeDesktopImgcentral from "components/C1HomeDesktopImgcentral";
-import C1HomeDesktopNavbar from "components/C1HomeDesktopNavbar";
-import C1HomeDesktopRowcrucero from "components/C1HomeDesktopRowcrucero";
-import C1HomeDesktopRowsubheading from "components/C1HomeDesktopRowsubheading";
 import CabinasComponent from "components/Cabinas";
 import Header from "components/Header";
-import ServicesSection from "components/ServicesSection/ServicesSection";
 import { listCabins } from "utils/lists";
 import Footer from "components/Footer";
 
