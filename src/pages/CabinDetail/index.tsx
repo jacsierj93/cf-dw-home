@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useRef, useState } from "react";
 
 import { Button, Img, Line, Text, List } from "components";
@@ -288,7 +289,7 @@ const CabinsDetailsPage: React.FC = () => {
               
         </div>
         <div ref={target} className="bg-gradient7 w-full min-h-[493px]">
-                
+          <x-checkout workspace="f1b1c299-3c5f-4b76-8a22-952aa67a6255"></x-checkout>
         </div>
         <div className="flex flex-col gap-8 items-start justify-start max-w-[1256px] mt-[32px] mx-auto md:px-[20px]  w-full">
           <div className="flex sm:flex-col flex-row gap-6 items-center justify-between w-full">
