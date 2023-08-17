@@ -2,7 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "pages/NotFound";
 import { Img } from "components";
-const HomeDesktop = React.lazy(() => import("pages/HomeDesktop"));
+const HomeDesktop = React.lazy(() => {
+  return Promise.all([
+    import("pages/HomeDesktop"),
+    new Promise(resolve => setTimeout(resolve, 3000))
+  ])
+  .then(([moduleExports]) => moduleExports);
+});
 const Cabins = React.lazy(() => import("pages/Cabins"));
 const CabinDetail = React.lazy(() => import("pages/CabinDetail"));
 const ProjectRoutes = () => {
