@@ -20,6 +20,7 @@ const CabinsPage: React.FC = () => {
           <C1HomeDesktopImgcentral
             className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] md:px-10 sm:px-5 w-full"
             style={{ backgroundImage: "url('images/img_imgcentral.png')" }}
+            buttontext={false}
             spantext={
               <Text className="font-bold leading-[90.00px] md:text-5xl text-6xl text-center text-gray-50">
                 <span className="text-gray-50 font-clashgroteskvariable">

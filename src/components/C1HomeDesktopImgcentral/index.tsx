@@ -9,7 +9,7 @@ type C1HomeDesktopImgcentralProps = Omit<
   Partial<{
     spantext: JSX.Element | string;
     description: JSX.Element | string;
-    buttontext: string;
+    buttontext: string | boolean;
     background: {type: 'image' | 'video', sources: {format:string, source:string}[]}
   }>;
 
@@ -51,6 +51,14 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
           }
           
         </div>
+          {
+            (props.buttontext)?
+            <Button className="bg-lime-A700 cursor-pointer font-clashdisplayvariable font-semibold py-3.5 rounded-lg text-base text-black-900 text-center w-[196px] z-10">
+              {/* TODO: Este boton debe ser reemplazado por KUTAMA para invocar el widget */}
+              {props?.buttontext}
+            </Button>:''
+          }
+        
       </div>
     </>
   );
@@ -75,9 +83,9 @@ C1HomeDesktopImgcentral.defaultProps = {
       </span>
     </Text>
   ),
+  buttontext:false,
   description:
     "La música del mundo es una mezcla ecléctica de sonidos tradicionales y contemporáneos de todo el planeta. Es una forma estupenda de explorar y apreciar diferentes culturas.",
-  buttontext: "Reservar ahora",
   background:{
     type:'video',
     sources:[

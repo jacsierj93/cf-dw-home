@@ -91,6 +91,7 @@ const HomeDesktopPage: React.FC = () => {
           
           <C1HomeDesktopImgcentral
             style={{ backgroundImage: "url('images/img_imgcentral.png')" }}
+            buttontext="Reservar Ahora"
             spantext={
               <Text className="font-bold leading-[90.00px] md:text-5xl text-6xl text-center text-gray-50">
                 <span className="text-gray-50 font-clashgroteskvariable">
