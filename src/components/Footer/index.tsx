@@ -5,18 +5,18 @@ import { Img, Text } from "components";
 const Footer: React.FC<{}> = (props) => {
 
     return <>
-        <div className="relative bottom-[0] flex flex-col font-inter md:gap-10 gap-16 h-[786px] md:h-auto inset-x-[0] items-center justify-end  max-w-[1387px] mx-auto pb-12 pt-16 w-full">
+        <div className="relative bottom-[0] flex flex-col font-inter tablet:gap-10 gap-16 h-[786px] tablet:h-auto inset-x-[0] items-center justify-end  max-w-[1387px] mx-auto pb-12 pt-16 w-full">
             <Img
-                className="absolute h-[786px] sm:h-auto md:h-full md:w-full mx-auto object-cover"
+                className="absolute h-[786px] mobile:h-auto tablet:h-full tablet:w-full mx-auto object-cover"
                 src="/images/img_bgfiguraonda.png"
                 alt="bgfiguraonda"
             />
-            <div className="flex flex-col items-start justify-start max-w-7xl sm:px-5 px-8 w-full z-10">
+            <div className="flex flex-col items-start justify-start max-w-7xl mobile:px-5 px-8 w-full z-10">
                 <div className="flex flex-col items-start justify-start w-full">
                     <div className="flex flex-col gap-8 items-start justify-start w-full">
-                        <div className="flex flex-col items-start justify-start w-[28%] md:w-full md:w-auto">
+                        <div className="flex flex-col items-start justify-start w-[28%] tablet:w-full tablet:w-auto">
                             <Img
-                            className="h-[95px] md:h-[55px] md:h-auto object-contain"
+                            className="h-[95px] tablet:h-[55px] tablet:h-auto object-contain"
                             src="/images/img_logocruisefestivalmesa.png"
                             alt="logocruisefesti_One"
                             />
@@ -24,7 +24,7 @@ const Footer: React.FC<{}> = (props) => {
                             <div className="flex w-full justify-center items-center">
                                 <span>
                                     <Text
-                                        className="leading-[24.00px] md:max-w-full max-w-xs text-sm text-gray-50"
+                                        className="leading-[24.00px] tablet:max-w-full max-w-xs text-sm text-gray-50"
                                         size="txtInterRegular16"
                                         >
                                             Organizador por: 
@@ -32,16 +32,16 @@ const Footer: React.FC<{}> = (props) => {
                                     
                                 </span>
                                 <Img
-                                    className="h-[95px] md:h-[65px] md:h-auto object-contain"
+                                    className="h-[95px] tablet:h-[65px] tablet:h-auto object-contain"
                                     src="/images/hps_wo_slogan.png"
                                     alt="logohpsbeat_One"
                                 />
                             </div>
                             
                         </div>
-                        <div className="flex flex-col items-start justify-start w-80 sm:w-auto">
+                        <div className="flex flex-col items-start justify-start w-80 mobile:w-auto">
                             <Text
-                            className="leading-[24.00px] md:max-w-full max-w-xs text-base text-gray-50"
+                            className="leading-[24.00px] tablet:max-w-full max-w-xs text-base text-gray-50"
                             size="txtInterRegular16"
                             >
                             ¡Súmate a la experiencia que va a ser un antes y un
@@ -52,8 +52,8 @@ const Footer: React.FC<{}> = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col gap-8 items-start justify-start sm:px-5 px-8 w-auto md:w-full">
-                <div className="flex flex-row sm:flex-col gap-8 items-center justify-start w-full">
+            <div className="flex flex-col gap-8 items-start justify-start mobile:px-5 px-8 w-auto tablet:w-full">
+                <div className="flex flex-row mobile:flex-col gap-8 items-center justify-start w-full">
                 <Text
                 className="flex-1 text-base text-blue_gray-300 w-auto"
                 size="txtInterRegular16Bluegray300"

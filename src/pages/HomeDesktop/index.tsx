@@ -87,13 +87,13 @@ const HomeDesktopPage: React.FC = () => {
     <>
       <div className="bg-gray-900 font-clashdisplayvariable mx-auto pt-[26px] relative w-full h-full">
         <Header/>
-        <div className="relative font-clashgroteskvariable h-[694px] md:h-auto inset-x-[0] max-w-[1387px] mx-auto md:px-5 top-[0] w-full">
+        <div className="relative font-clashgroteskvariable h-[694px] tablet:h-auto inset-x-[0] max-w-[1387px] mx-auto tablet:px-5 top-[0] w-full">
           
           <C1HomeDesktopImgcentral
             style={{ backgroundImage: "url('images/img_imgcentral.png')" }}
             buttontext="Reservar Ahora"
             spantext={
-              <Text className="font-bold leading-[90.00px] md:text-5xl text-6xl text-center text-gray-50">
+              <Text className="font-bold leading-[90.00px] tablet:text-5xl text-6xl text-center text-gray-50">
                 <span className="text-gray-50 font-clashgroteskvariable">
                   WELCOME TO <br />
                 </span>
@@ -109,7 +109,7 @@ const HomeDesktopPage: React.FC = () => {
             }
             description={
               <Text
-                className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
+                className="leading-[42.00px] max-w-[1124px] tablet:max-w-full mobile:text-2xl tablet:text-[26px] text-[28px] text-center text-gray-50"
                 size="txtClashGroteskVariableMedium28"
               >
                 Sé parte del primer festival de música electrónica a bordo de un crucero de lujo. 72 Horas NON-STOP con los mejores DJs internacionales. <span className="font-bold">Zarparás desde Buenos Aires,</span> recorriendo Punta del Este y Montevideo <span className="font-bold">la primera semana de Abril 2024.</span>
@@ -119,20 +119,20 @@ const HomeDesktopPage: React.FC = () => {
         </div>
 
 
-        <div className="flex flex-col font-clashgroteskvariable md:gap-10 gap-[5400px] items-center justify-start w-full mt-8 max-w-[1387px] mx-auto mt-0">
+        <div className="flex flex-col font-clashgroteskvariable tablet:gap-10 gap-[5400px] items-center justify-start w-full mt-8 max-w-[1387px] mx-auto mt-0">
               <div
-                className="bg-contain bg-no-repeat flex flex-col h-[630px] md:h-auto items-center justify-center pb-[15px] px-[15px] w-full z-10"
+                className="bg-contain bg-no-repeat flex flex-col h-[630px] tablet:h-auto items-center justify-center pb-[15px] px-[15px] w-full z-10"
                 style={{ backgroundImage: "url('images/img_group2.svg')" }}
               >
-                <div className="md:h-[400px] sm:h-[180px] h-[615px] max-w-[1392px] mx-auto md:px-5 py-9 relative w-full">
+                <div className="tablet:h-[400px] mobile:h-[180px] h-[615px] max-w-[1392px] mx-auto tablet:px-5 py-9 relative w-full">
                   <Img
-                    className="absolute h-[527px] md:h-auto inset-y-[0] left-[6%] my-auto object-cover rounded-[10px] w-1/2"
+                    className="absolute h-[527px] tablet:h-auto inset-y-[0] left-[6%] my-auto object-cover rounded-[10px] w-1/2"
                     src="images/img_rectangle1021.png"
                     alt="rectangle1021"
                   />
                   <div className="absolute flex flex-col h-max inset-y-[0] items-center justify-start my-auto right-[3%] w-full">
                     <Text
-                      className="leading-[60.00px] left-1/4 relative sm:text-sm md:text-4xl text-[70px] text-gray-50"
+                      className="leading-[60.00px] left-1/4 relative mobile:text-sm tablet:text-4xl text-[70px] text-gray-50"
                       size="txtClashGroteskVariableBold100"
                     >
                       <span className="text-indigo-A100 font-clashgroteskvariable text-left font-bold">
@@ -161,12 +161,12 @@ const HomeDesktopPage: React.FC = () => {
               </div>
             </div>
             <div className="p-[12px] max-w-[1387px] mx-auto">
-               <div className="bg-gray-900 border border-gray-50 border-solid flex flex-row h-20 md:h-auto items-center justify-end max-w-[1372px] px-[15px] py-3 rounded w-full cursor-pointer" 
+               <div className="bg-gray-900 border border-gray-50 border-solid flex flex-row h-20 tablet:h-auto items-center justify-end max-w-[1372px] px-[15px] py-3 rounded w-full cursor-pointer" 
                 onClick={()=>{toggleServices(!ServicesOpen)}}>
-                    <div className="flex flex-row sm:gap-10 items-center justify-between w-[63%] sm:w-[90%]">
-                      <div className="flex flex-col items-start justify-center w-auto sm:w-full">
+                    <div className="flex flex-row mobile:gap-10 items-center justify-between w-[63%] mobile:w-[90%]">
+                      <div className="flex flex-col items-start justify-center w-auto mobile:w-full">
                         <Text
-                          className="text-5xl sm:text-[24px] md:text-[44px] text-center text-gray-50 w-auto"
+                          className="text-5xl mobile:text-[24px] tablet:text-[44px] text-center text-gray-50 w-auto"
                           size="txtClashGroteskVariableBold48"
                         >
                           <span className="text-gray-50 font-clashgroteskvariable font-bold">
@@ -178,7 +178,7 @@ const HomeDesktopPage: React.FC = () => {
                         </Text>
                       </div>
                       <Img
-                        className="md:h-10 md:w-10 sm:h-[24px] sm:w-[24px]"
+                        className="tablet:h-10 tablet:w-10 mobile:h-[24px] mobile:w-[24px]"
                         src="images/img_checkmark.svg"
                         alt="checkmark"
                       />
@@ -191,13 +191,13 @@ const HomeDesktopPage: React.FC = () => {
                 (index%2 == 0)?
                 (
                   <C1HomeDesktopRowcrucero
-                  className="bg-gradient5  flex sm:flex-col flex-row gap-8 items-center justify-center p-6 sm:px-5 rounded-[10px] w-auto md:w-full"
+                  className="bg-gradient5  flex mobile:flex-col flex-row gap-8 items-center justify-center p-6 mobile:px-5 rounded-[10px] w-auto tablet:w-full"
                   subheading={service.subTitle}
                   description={service.text}
                   imgUrl={service.image}
                   cssImg={service.extraCss}
                   heading={
-                    <Text className="font-bold sm:text-2xl md:text-[26px] text-[28px] text-gray-50 w-auto">
+                    <Text className="font-bold mobile:text-2xl tablet:text-[26px] text-[28px] text-gray-50 w-auto">
                       <span className="text-gray-900 font-clashgroteskvariable text-left">
                       {service.title}
                       </span>
@@ -207,13 +207,13 @@ const HomeDesktopPage: React.FC = () => {
                 ):
                 (
                    <C1HomeDesktopRowsubheading
-                    className="bg-gradient5  flex sm:flex-col-reverse flex-row gap-8 items-center justify-center p-6 sm:px-5 rounded-[10px] w-auto md:w-full"
+                    className="bg-gradient5  flex mobile:flex-col-reverse flex-row gap-8 items-center justify-center p-6 mobile:px-5 rounded-[10px] w-auto tablet:w-full"
                     subheading={service.subTitle}
                     descriptionTwo={service.text}
                     imgUrl={service.image}
                     cssImg={service.extraCss}
                     headingOne={
-                      <Text className="font-bold sm:text-2xl md:text-[26px] text-[28px] text-indigo-A100 w-auto">
+                      <Text className="font-bold mobile:text-2xl tablet:text-[26px] text-[28px] text-indigo-A100 w-auto">
                         <span className="text-gray-900 font-clashgroteskvariable text-left">
                           {service.title}
                         </span>
@@ -243,9 +243,9 @@ const HomeDesktopPage: React.FC = () => {
                       (index%2 === 0)?
                       (
                         <C1HomeDesktopRowsubheading
-                          className="bg-gradient4  flex md:flex-col flex-row gap-8 items-center justify-center p-6 sm:px-5 rounded-[10px] w-auto md:w-full"
+                          className="bg-gradient4  flex tablet:flex-col flex-row gap-8 items-center justify-center p-6 mobile:px-5 rounded-[10px] w-auto tablet:w-full"
                           headingOne={
-                            <Text className="font-bold sm:text-2xl md:text-[26px] text-[28px] text-lime-A700 w-auto">
+                            <Text className="font-bold mobile:text-2xl tablet:text-[26px] text-[28px] text-lime-A700 w-auto">
                               <span className="text-white-A700 font-clashgroteskvariable text-left">
                                 {mood.title}
                               </span>
@@ -259,7 +259,7 @@ const HomeDesktopPage: React.FC = () => {
                           </Text>}
                           //
                           descriptionTwo={<Text
-                            className="leading-[27.00px] max-w-[598px] md:max-w-full text-white text-lg font-normal"
+                            className="leading-[27.00px] max-w-[598px] tablet:max-w-full text-white text-lg font-normal"
                             style={{color:'#fff'}}
                             size="txtClashDisplayVariableMedium18"
                           >
@@ -270,9 +270,9 @@ const HomeDesktopPage: React.FC = () => {
                       ):
                       (
                         <C1HomeDesktopRowcrucero
-                          className="bg-gradient4  flex md:flex-col flex-row gap-8 items-center justify-center p-6 sm:px-5 rounded-[10px] w-auto md:w-full"
+                          className="bg-gradient4  flex tablet:flex-col flex-row gap-8 items-center justify-center p-6 mobile:px-5 rounded-[10px] w-auto tablet:w-full"
                           heading={
-                            <Text className="font-bold sm:text-2xl md:text-[26px] text-[28px] text-gray-50 w-auto">
+                            <Text className="font-bold mobile:text-2xl tablet:text-[26px] text-[28px] text-gray-50 w-auto">
                               <span className="text-white-A700 font-clashgroteskvariable text-left">
                                 {mood.title}
                               </span>
@@ -285,7 +285,7 @@ const HomeDesktopPage: React.FC = () => {
                             {mood.subTitle}
                           </Text>}
                           description={<Text
-                            className="leading-[27.00px] max-w-[598px] md:max-w-full text-white text-lg font-normal"
+                            className="leading-[27.00px] max-w-[598px] tablet:max-w-full text-white text-lg font-normal"
                             style={{color:'#fff'}}
                             size="txtClashDisplayVariableMedium18"
                           >

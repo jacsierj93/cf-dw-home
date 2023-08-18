@@ -15,14 +15,14 @@ const CabinsPage: React.FC = () => {
     <>
       <div className="bg-gray-900 font-clashdisplayvariable mx-auto pt-[26px] relative w-full h-full">
         <Header/>
-        <div className="relative font-clashgroteskvariable h-[694px] md:h-auto inset-x-[0] max-w-[1387px] mx-auto md:px-5 top-[0] w-full">
+        <div className="relative font-clashgroteskvariable h-[694px] tablet:h-auto inset-x-[0] max-w-[1387px] mx-auto tablet:px-5 top-[0] w-full">
           
           <C1HomeDesktopImgcentral
-            className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] md:px-10 sm:px-5 w-full"
+            className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] tablet:px-10 mobile:px-5 w-full"
             style={{ backgroundImage: "url('images/img_imgcentral.png')" }}
             buttontext={false}
             spantext={
-              <Text className="font-bold leading-[90.00px] md:text-5xl text-6xl text-center text-gray-50">
+              <Text className="font-bold leading-[90.00px] tablet:text-5xl text-6xl text-center text-gray-50">
                 <span className="text-gray-50 font-clashgroteskvariable">
                   CONOCE <br/>
                 </span>
@@ -38,7 +38,7 @@ const CabinsPage: React.FC = () => {
             }
             description={
               <Text
-                className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
+                className="leading-[42.00px] max-w-[1124px] tablet:max-w-full mobile:text-2xl tablet:text-[26px] text-[28px] text-center text-gray-50"
                 size="txtClashGroteskVariableMedium28"
               >
                 
@@ -53,14 +53,14 @@ const CabinsPage: React.FC = () => {
             style={{backgroundColor:'black'}}>
           <div className="w-full">
             <Img src="images/ondas_cabins.svg"
-                className=" absolute top-[40px] object-cover md:w-[50%] sm:w-[70%] xl:hidden "
+                className=" absolute top-[40px] object-cover tablet:w-[50%] mobile:w-[70%] desktop:hidden "
                 />
             <Img src="images/ondas_cabin2.svg"
-                className="absolute top-[40px] md:top-1/3 sm:1/2 object-cover w-full"
+                className="absolute top-[40px] tablet:top-1/3 mobile:1/2 object-cover w-full"
                 />
             
             <div className="flex flex-row gap-[18px] items-start justify-center w-full bg-gradient6 py-[54px] z-10">
-              <div className="flex flex-col gap-10 h-[416px] md:h-auto items-start justify-between mb-[470px] p-3 w-[435px] md:hidden ">
+              <div className="flex flex-col gap-10 h-[416px] tablet:h-auto items-start justify-between mb-[470px] p-3 w-[435px] tablet:hidden ">
                   
                   <div className="flex flex-col">
                     <Img
@@ -71,7 +71,7 @@ const CabinsPage: React.FC = () => {
                   </div>
               </div>
               <List
-                className="flex flex-col gap-6 items-start md:w-full items-center z-10"
+                className="flex flex-col gap-6 items-start tablet:w-full items-center z-10"
                 orientation="vertical"
               >
                 {

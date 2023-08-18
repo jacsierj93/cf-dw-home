@@ -18,13 +18,13 @@ const C1HomeDesktopDjcard: React.FC<C1HomeDesktopDjcardProps> = (props) => {
             src="images/img_rectangle1028.png"
             alt="rectangle1028"
           />
-          <Button className="absolute bg-gray-900 bottom-[1%] cursor-pointer font-bold font-clashgroteskvariable min-w-[146px] py-[27px] right-[34%] rounded-[10px] text-2xl md:text-[22px] text-center text-white-A700 sm:text-xl">
+          <Button className="absolute bg-gray-900 bottom-[1%] cursor-pointer font-bold font-clashgroteskvariable min-w-[146px] py-[27px] right-[34%] rounded-[10px] text-2xl tablet:text-[22px] text-center text-white-A700 mobile:text-xl">
             {props?.dateofbirth}
           </Button>
         </div>
         <div className="flex flex-col gap-4 items-center justify-start w-auto">
           <Text
-            className="sm:text-2xl md:text-[26px] text-[28px] text-white-A700 w-auto"
+            className="mobile:text-2xl tablet:text-[26px] text-[28px] text-white-A700 w-auto"
             size="txtClashGroteskVariableBold28"
           >
             {props?.language}
