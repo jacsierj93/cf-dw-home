@@ -9,7 +9,7 @@ type C1HomeDesktopImgcentralProps = Omit<
   Partial<{
     spantext: JSX.Element | string;
     description: JSX.Element | string;
-    buttontext: string;
+    buttontext: string | boolean;
     background: {type: 'image' | 'video', sources: {format:string, source:string}[]}
   }>;
 
@@ -19,7 +19,7 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
   return (
     <>
       <div
-        className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] md:p-10 sm:p-5 w-full"
+        className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] tablet:p-10 mobile:p-5 w-full"
         style={{ backgroundImage: (props.background.type != 'image')?"url('/images/img_imgcentral.png')":`url('${props.background.sources[0].source}')` }}
       >
         {
@@ -37,12 +37,12 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
           </div>: ''
         }
        
-        <div className="bg-gray-900_7f flex flex-col gap-8 items-center justify-center p-12 md:px-10 sm:px-5 rounded-[10px] w-auto md:w-full z-10">
+        <div className="bg-gray-900_7f flex flex-col gap-8 items-center justify-center p-12 tablet:px-10 mobile:px-5 rounded-[10px] w-auto tablet:w-full z-10">
           {props?.spantext}
           {
             (typeof props?.description == 'string')?
               (<Text
-                className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
+                className="leading-[42.00px] max-w-[1124px] tablet:max-w-full mobile:text-2xl tablet:text-[26px] text-[28px] text-center text-gray-50"
                 size="txtClashGroteskVariableMedium28"
               >
                 {props?.description}
@@ -51,6 +51,14 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
           }
           
         </div>
+          {
+            (props.buttontext)?
+            <Button className="bg-lime-A700 cursor-pointer font-clashdisplayvariable font-semibold py-3.5 rounded-lg text-base text-black-900 text-center w-[196px] z-10">
+              {/* TODO: Este boton debe ser reemplazado por KUTAMA para invocar el widget */}
+              {props?.buttontext}
+            </Button>:''
+          }
+        
       </div>
     </>
   );
@@ -59,7 +67,7 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
 C1HomeDesktopImgcentral.defaultProps = {
   spantext: (
     <Text
-      className="leading-[90.00px] max-w-[1076px] md:max-w-full md:text-5xl text-6xl text-center text-gray-50"
+      className="leading-[90.00px] max-w-[1076px] tablet:max-w-full tablet:text-5xl text-6xl text-center text-gray-50"
       size="txtClashGroteskVariableBold60"
     >
       <span className="text-gray-50 font-clashgroteskvariable font-bold">
@@ -75,9 +83,9 @@ C1HomeDesktopImgcentral.defaultProps = {
       </span>
     </Text>
   ),
+  buttontext:false,
   description:
     "La música del mundo es una mezcla ecléctica de sonidos tradicionales y contemporáneos de todo el planeta. Es una forma estupenda de explorar y apreciar diferentes culturas.",
-  buttontext: "Reservar ahora",
   background:{
     type:'video',
     sources:[

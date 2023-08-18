@@ -6,7 +6,7 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    screens: {xl: {min: "1280px"}, md: { max: "1050px" }, sm: { max: "550px" }},
+    screens: {desktop: {min: "1280px"}, tablet: { max: "1050px" }, mobile: { max: "550px" }},
     extend: {
       colors: {
         black: {

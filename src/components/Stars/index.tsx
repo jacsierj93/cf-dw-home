@@ -4,7 +4,7 @@ import { Text, Img } from "components";
 
 const Stars: React.FC<{description:string}> = ({description}) => {
     return <>
-        <div className="flex sm:flex-col flex-row font-clashdisplayvariable gap-8 sm:items-start justify-start w-auto sm:w-full">
+        <div className="flex mobile:flex-col flex-row font-clashdisplayvariable gap-8 mobile:items-start justify-start w-auto mobile:w-full">
                       <div className="flex flex-row gap-1 items-center justify-center w-auto ">
                           <div className="flex flex-row items-start justify-start w-auto">
                           <Img
@@ -34,7 +34,7 @@ const Stars: React.FC<{description:string}> = ({description}) => {
                           />
                           </div>
                           <Text
-                            className="text-base text-gray-50 w-auto sm:text-sm"
+                            className="text-base text-gray-50 w-auto mobile:text-sm"
                             size="txtClashDisplayVariableMedium16Gray50"
                             >
                             {description}

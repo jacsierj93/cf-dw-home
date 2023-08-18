@@ -61,17 +61,17 @@ const CabinsDetailsPage: React.FC = () => {
   return (
     <>
       <div className="bg-gray-900 font-clashdisplayvariable mx-auto pt-[26px] relative w-full h-full">
-      <div className={`p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 fixed top-[60px] right-[40px] sm:top-[30px] sm:right-[20px] z-30 ${(!copyOk)?'hidden':''}`}>
+      <div className={`p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 fixed top-[60px] right-[40px] mobile:top-[30px] mobile:right-[20px] z-30 ${(!copyOk)?'hidden':''}`}>
         Copiado al portapapeles
       </div>
         <Header/>
-        <div className="relative font-clashgroteskvariable h-[694px] md:h-auto inset-x-[0] max-w-[1387px] mx-auto md:px-5 top-[0] w-full">
+        <div className="relative font-clashgroteskvariable h-[694px] tablet:h-auto inset-x-[0] max-w-[1387px] mx-auto tablet:px-5 top-[0] w-full">
           
           <C1HomeDesktopImgcentral
-            className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] md:px-10 sm:px-5 w-full"
-            
+            className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] tablet:px-10 mobile:px-5 w-full"
+            buttontext={false}
             spantext={
-              <Text className="font-bold leading-[90.00px] md:text-5xl text-6xl text-center text-gray-50">
+              <Text className="font-bold leading-[90.00px] tablet:text-5xl text-6xl text-center text-gray-50">
                 <span className="text-gray-50 font-clashgroteskvariable">
                   CONOCE <br/>
                 </span>
@@ -87,7 +87,7 @@ const CabinsDetailsPage: React.FC = () => {
             }
             description={
               <Text
-                className="leading-[42.00px] max-w-[1124px] md:max-w-full sm:text-2xl md:text-[26px] text-[28px] text-center text-gray-50"
+                className="leading-[42.00px] max-w-[1124px] tablet:max-w-full mobile:text-2xl tablet:text-[26px] text-[28px] text-center text-gray-50"
                 size="txtClashGroteskVariableMedium28"
               >
                 
@@ -104,11 +104,11 @@ const CabinsDetailsPage: React.FC = () => {
         <div className={`relative w-full transition-all duration-300 ease-in-out transform pt-[30px]`}
             style={{backgroundColor:'black'}}>
           <div className="bg-gradient7  flex flex-col gap-[27px] items-center justify-start p-[15px] w-full">
-            <div className="flex sm:flex-col flex-row md:gap-10 items-center justify-between max-w-[1408px] mt-[17px] px-4 w-full">
-                <div className="flex md:flex-1 flex-col gap-4 items-start justify-start w-auto md:w-full sm:items-center">
-                <div className="flex md:flex-col flex-row gap-4 items-center md:items-start sm:items-center justify-start w-auto md:w-full">
+            <div className="flex mobile:flex-col flex-row tablet:gap-10 items-center justify-between max-w-[1408px] mt-[17px] px-4 w-full">
+                <div className="flex tablet:flex-1 flex-col gap-4 items-start justify-start w-auto tablet:w-full mobile:items-center">
+                <div className="flex tablet:flex-col flex-row gap-4 items-center tablet:items-start mobile:items-center justify-start w-auto tablet:w-full">
                     <Text
-                      className="text-5xl sm:text-[38px] md:text-[44px] text-gray-50 w-auto sm:text-center"
+                      className="text-5xl mobile:text-[38px] tablet:text-[44px] text-gray-50 w-auto mobile:text-center"
                       size="txtClashGroteskVariableBold48"
                       >
                       <>{cabin?.name}</>
@@ -124,15 +124,15 @@ const CabinsDetailsPage: React.FC = () => {
                 </div>
                 
                 </div>
-                <div className="flex flex-col font-montserrat gap-4 items-end justify-start w-auto sm:items-ends sm:w-full">
+                <div className="flex flex-col font-montserrat gap-4 items-end justify-start w-auto mobile:items-ends mobile:w-full">
                   <Text
-                      className="text-2xl md:text-[22px] text-gray-50_fa text-right sm:text-xl w-auto"
+                      className="text-2xl tablet:text-[22px] text-gray-50_fa text-right mobile:text-xl w-auto"
                       size="txtMontserratBold24"
                   >
                     <span className="text-gray-50_fa font-clashgroteskvariable text-base font-bold">
                       desde {" "}<br/>
                       </span>
-                      <span className="md:text-3xl sm:text-[28px] text-gray-50_fa font-clashgroteskvariable text-[32px] font-bold">
+                      <span className="tablet:text-3xl mobile:text-[28px] text-gray-50_fa font-clashgroteskvariable text-[32px] font-bold">
                       
                       {" USD "+cabin?.price}<br/>
                       </span>
@@ -152,7 +152,7 @@ const CabinsDetailsPage: React.FC = () => {
                   </Text>
                 <div className="flex flex-row font-clashdisplayvariable gap-[15px] items-center justify-center w-full">
                     <List
-                    className="sm:flex-col flex-row gap-[15px] w-auto"
+                    className="mobile:flex-col flex-row gap-[15px] w-auto"
                     orientation="horizontal"
                     >
                     <div className="flex flex-col items-start justify-start w-full">
@@ -172,32 +172,32 @@ const CabinsDetailsPage: React.FC = () => {
                 </div>
                 </div>
             </div>
-            <div className="flex flex-col font-clashdisplayvariable gap-2 md:h-auto items-start justify-start max-w-[1392px] mb-3.5 w-full">
-                <div className="grid grid-rows-4 grid-flow-col gap-4 sm:hidden">
+            <div className="flex flex-col font-clashdisplayvariable gap-2 tablet:h-auto items-start justify-start max-w-[1392px] mb-3.5 w-full">
+                <div className="grid grid-rows-4 grid-flow-col gap-4 mobile:hidden">
                     <div className="row-span-4 col-span-2">
                         <Img
-                        className="flex-1 md:flex-none md:h-auto sm:h-auto h-full max-h-[685px] object-cover rounded-bl-[12px] rounded-tl-[12px] sm:w-[] md:w-[]"
+                        className="flex-1 tablet:flex-none tablet:h-auto mobile:h-auto h-full max-h-[685px] object-cover rounded-bl-[12px] rounded-tl-[12px] mobile:w-[] tablet:w-[]"
                         src={`/images/${cabin?.images[1]}`}
                         alt="rectangleThree"
                         />
                     </div>
                     <div className="row-span-2">
                         <Img
-                        className="flex-1  h-full max-h-[338px] object-cover sm:w-[]"
+                        className="flex-1  h-full max-h-[338px] object-cover mobile:w-[]"
                         src={`/images/${cabin?.images[2]}`}
                         alt="rectangleFive"
                         />
                     </div>
                     <div className="row-span-2">
                         <Img
-                        className="flex-1 h-full max-h-[338px] object-cover  sm:w-[]"
+                        className="flex-1 h-full max-h-[338px] object-cover  mobile:w-[]"
                         src={`/images/${cabin?.images[3]}`}
                         alt="rectangleSix"
                         />
                     </div>
                     <div className="row-span-2 ">
                         <Img
-                        className="flex-1 md:flex-none h-full max-h-[338px] rounded-tr-[12px] object-cover sm:w-[] md:w-[]"
+                        className="flex-1 tablet:flex-none h-full max-h-[338px] rounded-tr-[12px] object-cover mobile:w-[] tablet:w-[]"
                         src={`/images/${cabin?.images[4]}`}
                         alt="rectangleFive_One"
                         />
@@ -213,7 +213,7 @@ const CabinsDetailsPage: React.FC = () => {
                 {
                   (typeof cabin != 'undefined')?
                   (
-                    <div className="hidden sm:block w-full h-full">
+                    <div className="hidden mobile:block w-full h-full">
                       <AwesomeSlider bullets={false} >
                         {cabin?.images.map((image)=>(
                           <div data-src={`/images/${image}`} />
@@ -231,23 +231,23 @@ const CabinsDetailsPage: React.FC = () => {
           </div>
           <div className="flex flex-col gap-8 items-left justify-start max-w-[1392px] mx-auto w-full">
                <Img
-                    className="h-auto m-auto object-contain w-1/3 absolute m-l-0 sm:w-[80%] mt-[-10%]"
+                    className="h-auto m-auto object-contain w-1/3 absolute m-l-0 mobile:w-[80%] mt-[-10%]"
                     src="/images/frame.svg"
                     alt="cabina_detalle"
                 />
-              <div className="w-full flex flex-col items-center justify-start z-10 sm:px-5 mb-[35px]">
+              <div className="w-full flex flex-col items-center justify-start z-10 mobile:px-5 mb-[35px]">
                 <Line className="bg-gray-300_71 h-px w-[89%] my-[35px]" />
-                <div className="bg-gray-900_bf flex flex-col items-start justify-start md:px-10 px-12 sm:px-5 py-6 rounded-[20px] w-auto md:w-full">
+                <div className="bg-gray-900_bf flex flex-col items-start justify-start tablet:px-10 px-12 mobile:px-5 py-6 rounded-[20px] w-auto tablet:w-full">
                     <div className="flex flex-col gap-3 items-start justify-start w-full">
                         <div className="flex flex-col gap-4 items-start justify-start max-w-[1262px] w-full">
                         <Text
-                            className="md:text-3xl sm:text-[28px] text-[32px] text-gray-50_01 w-auto"
+                            className="tablet:text-3xl mobile:text-[28px] text-[32px] text-gray-50_01 w-auto"
                             size="txtClashGroteskVariableBold32"
                         >
                             Detalles
                         </Text>
                         <Text
-                            className="leading-[24.00px] max-w-[1232px] md:max-w-full text-lg text-white-A700_9e"
+                            className="leading-[24.00px] max-w-[1232px] tablet:max-w-full text-lg text-white-A700_9e"
                             size="txtClashDisplayVariableSemiBold18"
                         >
                             <span className="text-white-A700 font-clashdisplayvariable text-left font-normal  ">
@@ -292,23 +292,23 @@ const CabinsDetailsPage: React.FC = () => {
               
         </div>
         <x-checkout workspace="f1b1c299-3c5f-4b76-8a22-952aa67a6255" hidden="true" active={showWidget}></x-checkout>
-        <div className="flex flex-col gap-8 items-start justify-start max-w-[1256px] mt-[32px] mx-auto md:px-[20px]  w-full">
-          <div className="flex sm:flex-col flex-row gap-6 items-center justify-between w-full">
+        <div className="flex flex-col gap-8 items-start justify-start max-w-[1256px] mt-[32px] mx-auto tablet:px-[20px]  w-full">
+          <div className="flex mobile:flex-col flex-row gap-6 items-center justify-between w-full">
             <Text
-              className="md:text-3xl sm:text-[28px] text-[32px] text-gray-50_01 w-auto"
+              className="tablet:text-3xl mobile:text-[28px] text-[32px] text-gray-50_01 w-auto"
               size="txtClashGroteskVariableBold32"
             >
               Recorrido del crucero
             </Text>
           </div>
-          <div className="flex flex-col items-start justify-start w-auto md:w-full">
+          <div className="flex flex-col items-start justify-start w-auto tablet:w-full">
             <Img
-              className="h-auto object-cover rounded-[16px]  w-[1232px] md:w-full sm:hidden"
+              className="h-auto object-cover rounded-[16px]  w-[1232px] tablet:w-full mobile:hidden"
               src="/images/mapa_desktop.jpg"
               alt="rectangleNineteen"
             />
             <Img
-              className="h-auto object-cover rounded-[16px]  w-[1232px] md:w-full hidden sm:block"
+              className="h-auto object-cover rounded-[16px]  w-[1232px] tablet:w-full hidden mobile:block"
               src="/images/mapa_mobile.jpg"
               alt="rectangleNineteen"
             />

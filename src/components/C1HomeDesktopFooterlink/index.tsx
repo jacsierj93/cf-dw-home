@@ -14,8 +14,8 @@ const C1HomeDesktopFooterlink: React.FC<C1HomeDesktopFooterlinkProps> = (
   return (
     <>
       <div className={props.className}>
-        <div className="flex flex-col items-start justify-start w-auto md:w-full">
-          <div className="flex flex-col items-center justify-center w-auto md:w-full">
+        <div className="flex flex-col items-start justify-start w-auto tablet:w-full">
+          <div className="flex flex-col items-center justify-center w-auto tablet:w-full">
             <Text
               className="text-base text-gray-50 w-auto"
               size="txtInterSemiBold16"

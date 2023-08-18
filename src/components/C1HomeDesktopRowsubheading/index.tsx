@@ -21,8 +21,8 @@ const C1HomeDesktopRowsubheading: React.FC<C1HomeDesktopRowsubheadingProps> = (
   return (
     <>
       <div className={props.className} style={{width:"100%",maxWidth:"1387px"}}>
-        <div className="flex flex-col gap-[42px] items-start justify-end w-auto md:w-full">
-          <div className="flex flex-col gap-3 items-start justify-start w-[598px] md:w-full">
+        <div className="flex flex-col gap-[42px] items-start justify-end w-auto tablet:w-full">
+          <div className="flex flex-col gap-3 items-start justify-start w-[598px] tablet:w-full">
             {(typeof props?.subheading === "string")?
               ( <Text
                 className="text-indigo-A100 text-lg w-full"
@@ -38,7 +38,7 @@ const C1HomeDesktopRowsubheading: React.FC<C1HomeDesktopRowsubheadingProps> = (
               </div>
               {(typeof props?.descriptionTwo === "string")?
               (   <Text
-                className="leading-[27.00px] max-w-[598px] md:max-w-full text-gray-900 text-lg font-normal"
+                className="leading-[27.00px] max-w-[598px] tablet:max-w-full text-gray-900 text-lg font-normal"
                 size="txtClashDisplayVariableMedium18"
               >
                 {props?.descriptionTwo}
@@ -51,9 +51,9 @@ const C1HomeDesktopRowsubheading: React.FC<C1HomeDesktopRowsubheadingProps> = (
             {props?.reservarAhoraTwo}
           </Button> */}
         </div>
-        <div className="flex flex-col items-center justify-start rounded-[10px] w-[49%] md:w-full">
+        <div className="flex flex-col items-center justify-start rounded-[10px] w-[49%] tablet:w-full">
           <Img
-            className="h-[350px] sm:h-[250px] object-cover rounded-[10px] w-full "
+            className="h-[350px] mobile:h-[250px] object-cover rounded-[10px] w-full "
             src={"images/"+props.imgUrl}
             alt="crucero_One"
             style={props.cssImg}
@@ -68,7 +68,7 @@ C1HomeDesktopRowsubheading.defaultProps = {
   subheading: "Habitaciones",
   headingOne: (
     <Text
-      className="sm:text-2xl md:text-[26px] text-[28px] text-indigo-A100 w-auto"
+      className="mobile:text-2xl tablet:text-[26px] text-[28px] text-indigo-A100 w-auto"
       size="txtClashGroteskVariableBold28IndigoA100"
     >
       <span className="text-indigo-A100 font-clashgroteskvariable text-left font-bold">
