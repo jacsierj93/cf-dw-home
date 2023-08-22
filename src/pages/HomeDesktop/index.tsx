@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-
+// @ts-nocheck
+import React, { useEffect, useState } from "react";
 import { Img, Text } from "components";
 import C1HomeDesktopImgcentral from "components/C1HomeDesktopImgcentral";
 import C1HomeDesktopRowcrucero from "components/C1HomeDesktopRowcrucero";
@@ -83,6 +83,7 @@ const HomeDesktopPage: React.FC = () => {
     }
   ]
   const [ServicesOpen,toggleServices] = React.useState(false);
+  const [showWidget, setShowWidget] = useState(false);
   return (
     <>
       <div className="bg-gray-900 font-clashdisplayvariable mx-auto pt-[26px] relative w-full h-full">
@@ -115,7 +116,9 @@ const HomeDesktopPage: React.FC = () => {
                 Sé parte del primer festival de música electrónica a bordo de un crucero de lujo. 72 Horas NON-STOP con los mejores DJs internacionales. <span className="font-bold">Zarparás desde Buenos Aires,</span> recorriendo Punta del Este y Montevideo <span className="font-bold">la primera semana de Abril 2024.</span>
               </Text>
             }
+            showWidget={setShowWidget}
           />
+          <x-checkout workspace="f1b1c299-3c5f-4b76-8a22-952aa67a6255" hidden="true" active={showWidget}></x-checkout>
         </div>
 
 

@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { Button, Text } from "components";
 
 type C1HomeDesktopImgcentralProps = Omit<
@@ -11,11 +10,13 @@ type C1HomeDesktopImgcentralProps = Omit<
     description: JSX.Element | string;
     buttontext: string | boolean;
     background: {type: 'image' | 'video', sources: {format:string, source:string}[]}
+    showWidget: (widget: boolean) => void;
   }>;
 
 const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
   props,
 ) => {
+
   return (
     <>
       <div
@@ -49,16 +50,15 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
               </Text>)
             :props?.description
           }
-          
+        
         </div>
           {
             (props.buttontext)?
-            <Button className="bg-lime-A700 cursor-pointer font-clashdisplayvariable font-semibold py-3.5 rounded-lg text-base text-black-900 text-center w-[196px] z-10">
+            <Button onClick={() => props.showWidget(true)} className="bg-lime-A700 cursor-pointer font-clashdisplayvariable font-semibold py-3.5 rounded-lg text-base text-black-900 text-center w-[196px] z-10">
               {/* TODO: Este boton debe ser reemplazado por KUTAMA para invocar el widget */}
               {props?.buttontext}
             </Button>:''
           }
-        
       </div>
     </>
   );
