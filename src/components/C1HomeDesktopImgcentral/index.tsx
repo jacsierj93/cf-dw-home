@@ -54,7 +54,7 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
         </div>
           {
             (props.buttontext)?
-            <Button onClick={() => props.showWidget(true)} className="bg-lime-A700 cursor-pointer font-clashdisplayvariable font-semibold py-3.5 rounded-lg text-base text-black-900 text-center w-[196px] z-10">
+            <Button onClick={() => props.showWidget(true)} className="bg-lime-A700 cursor-pointer font-clashdisplayvariable font-semibold py-3.5 rounded-lg text-base text-black-900 text-center w-auto px-[20px] z-10">
               {/* TODO: Este boton debe ser reemplazado por KUTAMA para invocar el widget */}
               {props?.buttontext}
             </Button>:''
