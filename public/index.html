@@ -28,8 +28,29 @@
           
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+      .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+        font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index:100;
+      }
 
-    <script type="module" src="/scripts/index.iife.js"></script>
+      .my-float{
+        margin-top:16px;
+      }
+    </style>
+
+    <script defer type="module" src="/scripts/index.iife.js"></script>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -39,27 +60,21 @@
       })(window,document,'script','dataLayer','GTM-T6KRVWLS');
     </script>
     <!-- End Google Tag Manager -->
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
     <div class="dhiwise-code" id="root"></div>
+
+    <a href="https://wa.me/56933562715?text=¡Hola! Quiero saber cómo estar %23EnAlta." class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6KRVWLS"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
     <!-- End Google Tag Manager (noscript) -->
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/64dea28494cf5d49dc6b0d93/1h82qllt3';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      })();
-      </script>
-      <!--End of Tawk.to Script-->
+   
   </body>
 </html>
