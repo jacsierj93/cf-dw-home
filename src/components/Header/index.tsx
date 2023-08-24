@@ -21,7 +21,7 @@ const Header: React.FC<{}> = (props) => {
             alt="logo_cruisefestival"
           />
         </Link>
-        <C1HomeDesktopNavbar className={`relative flex grow flex-row gap-6 h-[89px] tablet:h-auto inset-x-[0] items-center justify-center mx-auto top-[0] w-auto z-20 mobile:flex-col mobile:width-2/3 mobile:ml-0 mobile:mt-[80px] mobile:py-20 mobile:rounded-b-[12px] mobile:absolute mobile:bg-gray-900 ${(!isMenuMobileOpen)?'mobile:hidden':''}`} />
+        <C1HomeDesktopNavbar className={`relative flex grow flex-row gap-6 h-[28px] tablet:h-auto inset-x-[0] items-start  mobile:items-center justify-center mx-auto top-[0] w-auto z-20 mobile:flex-col mobile:width-2/3 mobile:ml-0 mobile:mt-[80px] mobile:py-[20px] mobile:rounded-b-[12px] mobile:absolute mobile:bg-gray-900 ${(!isMenuMobileOpen)?'mobile:hidden':''}`} />
         <div className="flex grow justify-end">
           <div className="hidden mobile:block">
             <button className="navbar-burger flex items-center text-lime-A700 p-3" onClick={()=>toogleMenu(!isMenuMobileOpen)}>
