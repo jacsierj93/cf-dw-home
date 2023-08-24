@@ -22,9 +22,7 @@ const CabinasComponent: React.FC<CabinsProps> = (props) => {
                     src={"images/"+props.cover}
                     alt={props.name}
                   />
-                  <Button className="absolute bg-black-900_7f cursor-pointer font-medium h-8 leading-[normal] min-w-[87px] py-2 right-[2%] rounded-lg text-center text-lime-A700_9e text-xs top-[3%]">
-                    {props.images.length}
-                  </Button>
+                  
                 </div>
                 <div className="bg-black-900_02 flex flex-col font-clashgroteskvariable gap-6 items-start justify-start p-6 mobile:px-5 rounded-br-[12px] mobile:rounded-bl-[12px] rounded-tr-[12px] mobile:rounded-tr-none w-[540px] mobile:w-full">
                   <div className="flex flex-row mobile:flex-col gap-6 mobile:gap-4 items-start mobile:items-end justify-start w-full">
