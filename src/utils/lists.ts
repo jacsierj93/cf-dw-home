@@ -6,6 +6,7 @@ export type Cabins = {
     description: string,
     features:string[],
     mini_desc: string,
+    filter: number
   }
 
   
@@ -35,7 +36,8 @@ export const listCabins: Cabins[] = [
         'Frigobar',
         'Climatizador',
       ],
-      mini_desc: 'Moderna y acogedora'
+      mini_desc: 'Moderna y acogedora',
+      filter: 4
     },
     {
       images: [
@@ -62,7 +64,8 @@ export const listCabins: Cabins[] = [
         'Frigobar',
         'Climatizador',
       ],
-      mini_desc: 'Panorámica y confortable'
+      mini_desc: 'Panorámica y confortable',
+      filter: 4
     },
     {
     images: [
@@ -89,7 +92,8 @@ export const listCabins: Cabins[] = [
         'Frigobar',
         'Climatizador',
       ],
-      mini_desc: 'Lujosa con vista al mar'
+      mini_desc: 'Lujosa con vista al mar',
+      filter: 4
     },
     {
       images: [
@@ -119,6 +123,7 @@ export const listCabins: Cabins[] = [
         'Climatizador',
         'Acceso Exclusivo a SPA',
       ],
-      mini_desc: 'Exclusiva, Única y con vista al mar'
+      mini_desc: 'Exclusiva, Única y con vista al mar',
+      filter: 3
     },
 ]

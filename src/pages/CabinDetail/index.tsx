@@ -291,7 +291,7 @@ const CabinsDetailsPage: React.FC = () => {
               
               
         </div>
-        <x-checkout workspace="f1b1c299-3c5f-4b76-8a22-952aa67a6255" hidden="true" active={showWidget}></x-checkout>
+        <x-checkout workspace="f1b1c299-3c5f-4b76-8a22-952aa67a6255" hidden="true" active={showWidget} filter={cabin.filter}></x-checkout>
         <div className="flex flex-col gap-8 items-start justify-start max-w-[1256px] mt-[32px] mx-auto tablet:px-[20px]  w-full">
           <div className="flex mobile:flex-col flex-row gap-6 items-center justify-between w-full">
             <Text
