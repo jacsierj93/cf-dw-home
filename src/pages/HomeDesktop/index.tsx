@@ -163,9 +163,8 @@ const HomeDesktopPage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="p-[12px] max-w-[1387px] mx-auto">
-               <div className="bg-gray-900 border border-gray-50 border-solid flex flex-row h-20 tablet:h-auto items-center justify-end max-w-[1372px] px-[15px] py-3 rounded w-full cursor-pointer" 
-                onClick={()=>{toggleServices(!ServicesOpen)}}>
+            <div className="p-[12px] max-w-[1387px] mx-auto flex flex-col items-center gap-[12px]">
+               <div className="bg-gray-900 border border-gray-50 border-solid flex flex-row h-20 tablet:h-auto items-center justify-end max-w-[1372px] px-[15px] py-3 rounded w-full">
                     <div className="flex flex-row mobile:gap-10 items-center justify-between w-[63%] mobile:w-[90%]">
                       <div className="flex flex-col items-start justify-center w-auto mobile:w-full">
                         <Text
@@ -181,12 +180,16 @@ const HomeDesktopPage: React.FC = () => {
                         </Text>
                       </div>
                       <Img
-                        className="tablet:h-10 tablet:w-10 mobile:h-[24px] mobile:w-[24px]"
+                        className={`tablet:h-10 tablet:w-10 mobile:h-[24px] mobile:w-[24px] ${(ServicesOpen && 'rotate-90')}`}
                         src="images/img_checkmark.svg"
                         alt="checkmark"
                       />
                     </div>
-                  </div>
+                </div>
+                <div className={`rounded-full border border-white ${ServicesOpen?'px-[17px]':'px-[15px]'} cursor-pointer text-gray-50 hover:text-[#9381ff] hover:border-[#9381ff]`}
+                 onClick={()=>{toggleServices(!ServicesOpen)}}>
+                  <span className=" font-clashgroteskvariable text-[30px] select-none">{(ServicesOpen?'-':'+')}</span>
+                </div>
             </div>
 
             <ServicesSection expanded={ServicesOpen}>
