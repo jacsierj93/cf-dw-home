@@ -1,0 +1,9 @@
+.awssld {
+    --slider-height-percentage: 40%;
+    --organic-arrow-color: #9381ff;
+    --loader-bar-height: 0px;
+}
+
+.awssld__content {
+    background-color: transparent;
+}
