@@ -23,6 +23,9 @@ export type Services = {
 const HomeDesktopPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
+    window.addEventListener('kt-widget-close', () => { 
+      setShowWidget(false);
+    });
   }, [])
 
   const AutoPlaySlider = withAutoplay(AwesomeSlider);
@@ -124,7 +127,7 @@ const HomeDesktopPage: React.FC = () => {
             }
             showWidget={setShowWidget}
           />
-          <x-checkout workspace="f1b1c299-3c5f-4b76-8a22-952aa67a6255" hidden="true" active={showWidget} filter={4}></x-checkout>
+          <x-checkout workspace="f1b1c299-3c5f-4b76-8a22-952aa67a6255" hidden="true" active={showWidget} filter={4} onclose={() => { alert() }}></x-checkout>
         </div>
 
 
