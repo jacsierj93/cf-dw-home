@@ -4,6 +4,10 @@
     --loader-bar-height: 0px;
 }
 
+.awwsld-mobile.awssld {
+    --slider-height-percentage: 140%; 
+}
+
 .awssld__content {
     background-color: transparent;
 }

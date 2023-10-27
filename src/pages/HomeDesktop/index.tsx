@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React, { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
 import { Img, Text } from "components";
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
@@ -26,6 +27,8 @@ const HomeDesktopPage: React.FC = () => {
     window.addEventListener('kt-widget-close', () => { 
       setShowWidget(false);
     });
+
+   
   }, [])
 
   const AutoPlaySlider = withAutoplay(AwesomeSlider);
@@ -131,51 +134,66 @@ const HomeDesktopPage: React.FC = () => {
         </div>
 
 
-
-        <AutoPlaySlider play={true} interval={6000} bullets={false} organic-arrow-color={'#FFF'} className="bg-transparent h–auto" >
-          <div className="flex flex-col font-clashgroteskvariable tablet:gap-10 gap-[5400px] items-center justify-start w-full mt-8 max-w-[1387px] mx-auto mt-0">
-            <div
-              className="bg-contain bg-no-repeat flex flex-col h-[630px] tablet:h-auto items-center justify-center pb-[15px] px-[15px] w-full z-10"
-              style={{ backgroundImage: "url('images/img_group2.svg')" }}
-            >
-              <div className="tablet:h-[400px] mobile:h-[180px] h-[615px] max-w-[1392px] mx-auto tablet:px-5 py-9 relative w-full">
-                <Img
-                  className="absolute h-[527px] tablet:h-auto inset-y-[0] left-[6%] my-auto object-cover rounded-[10px] w-1/2"
-                  src="images/img_rectangle1021.png"
-                  alt="rectangle1021"
-                />
-                <div className="absolute flex flex-col h-max inset-y-[0] items-center justify-start my-auto right-[3%] w-full">
-                  <Text
-                    className="leading-[60.00px] left-1/4 relative mobile:text-sm tablet:text-4xl text-[70px] text-gray-50"
-                    size="txtClashGroteskVariableBold100"
-                  >
-                    <span className="text-indigo-A100 font-clashgroteskvariable text-left font-bold">
-                      <>
-                      En Alta mar,
-                        <br />
-                      </>
-                    </span>
-                    <span className="text-gray-50 font-clashgroteskvariable text-left font-normal">
-                      <>
-                        siéntelo todo en su <br />máxima expresión,
-                        <br />
-                        y mantente en alta.
-                        <br />
-                      </>
-                    </span>
-                    <span className="text-gray-50 font-clashgroteskvariable text-left font-bold">
-                      #
-                    </span>
-                    <span className="text-indigo-A100 font-clashgroteskvariable text-left font-bold">
-                    CruiseFestivalEnAlta
-                    </span>
-                  </Text>
+        {
+          (isMobile)?
+          (
+            <AutoPlaySlider play={true} interval={6000} bullets={false} organic-arrow-color={'#FFF'} className="awwsld-mobile" >
+              <div data-src="/images/sold_out_mobile.jpg" />
+              <div data-src="/images/slide_mapa_mobile.jpg" />
+            </AutoPlaySlider>
+          )
+          :
+          (
+            <AutoPlaySlider play={true} interval={6000} bullets={false} organic-arrow-color={'#FFF'}>
+              <div className="flex flex-col font-clashgroteskvariable tablet:gap-10 gap-[5400px] items-center justify-start w-full mt-8 max-w-[1387px] mx-auto mt-0">
+                <div
+                  className="bg-contain bg-no-repeat flex flex-col h-[630px] tablet:h-auto items-center justify-center pb-[15px] px-[15px] w-full z-10"
+                  style={{ backgroundImage: "url('images/img_group2.svg')" }}
+                >
+                  <div className="tablet:h-[400px] mobile:h-[180px] h-[615px] max-w-[1392px] mx-auto tablet:px-5 py-9 relative w-full">
+                    <Img
+                      className="absolute h-[527px] tablet:h-auto inset-y-[0] left-[6%] my-auto object-cover rounded-[10px] w-1/2"
+                      src="images/img_rectangle1021.png"
+                      alt="rectangle1021"
+                    />
+                    <div className="absolute flex flex-col h-max inset-y-[0] items-center justify-start my-auto right-[3%] w-full">
+                      <Text
+                        className="leading-[60.00px] left-1/4 relative mobile:text-sm tablet:text-4xl text-[70px] text-gray-50"
+                        size="txtClashGroteskVariableBold100"
+                      >
+                        <span className="text-indigo-A100 font-clashgroteskvariable text-left font-bold">
+                          <>
+                          En Alta mar,
+                            <br />
+                          </>
+                        </span>
+                        <span className="text-gray-50 font-clashgroteskvariable text-left font-normal">
+                          <>
+                            siéntelo todo en su <br />máxima expresión,
+                            <br />
+                            y mantente en alta.
+                            <br />
+                          </>
+                        </span>
+                        <span className="text-gray-50 font-clashgroteskvariable text-left font-bold">
+                          #
+                        </span>
+                        <span className="text-indigo-A100 font-clashgroteskvariable text-left font-bold">
+                        CruiseFestivalEnAlta
+                        </span>
+                      </Text>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div data-src="/images/slide_mapa.jpg" />
-        </AutoPlaySlider>
+              <div data-src="/images/sold_out_desktop.jpg" />
+              <div data-src="/images/slide_mapa.jpg" />
+            </AutoPlaySlider>
+          )
+        }
+        
+
+
         
             <div className="p-[12px] max-w-[1387px] mx-auto flex flex-col items-center gap-[12px]">
                <div className="bg-gray-900 border border-gray-50 border-solid flex flex-row h-20 tablet:h-auto items-center justify-end max-w-[1372px] px-[15px] py-3 rounded w-full">

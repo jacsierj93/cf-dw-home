@@ -16,12 +16,12 @@ const Footer: React.FC<{}> = (props) => {
                     <div className="flex flex-col gap-8 items-start justify-start w-full">
                         <div className="flex flex-col items-start justify-start w-[28%] tablet:w-full tablet:w-auto">
                             <Img
-                            className="h-[95px] tablet:h-[55px] tablet:h-auto object-contain"
+                            className="h-[95px] tablet:h-[55px] object-contain"
                             src="/images/img_logocruisefestivalmesa.png"
                             alt="logocruisefesti_One"
                             />
                             
-                            <div className="flex w-full justify-center items-center">
+                            <div className="flex w-full justify-start items-center">
                                 <span>
                                     <Text
                                         className="leading-[24.00px] tablet:max-w-full max-w-xs text-sm text-gray-50"
@@ -32,7 +32,7 @@ const Footer: React.FC<{}> = (props) => {
                                     
                                 </span>
                                 <Img
-                                    className="h-[95px] tablet:h-[65px] tablet:h-auto object-contain"
+                                    className="h-[95px] tablet:h-[65px] object-contain"
                                     src="/images/hps_wo_slogan.png"
                                     alt="logohpsbeat_One"
                                 />
