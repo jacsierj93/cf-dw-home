@@ -6,12 +6,13 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    screens: {desktop: {min: "1280px"}, tablet: { max: "1050px" }, mobile: { max: "550px" }},
+    screens: {desktop: {min: "1280px"}, tablet: { max: "1050px" }, mobile: { max: "750px" }},
     extend: {
       colors: {
         black: {
           900: "#010101",
           "900_7f": "#0c0c0c7f",
+          "900_f": "#0101017f",
           "900_3f": "#0000003f",
           "900_01": "#101010",
           "900_02": "#0c0c0c",
@@ -20,6 +21,8 @@ module.exports = {
           400: "#e4533f",
           500: "#e44b3f",
           600: "#e6273d",
+          A400_7f: "#fa12367f",
+          A400: "#fa1236",
           "500_01": "#e44c3d",
           "400_02": "#e36140",
           "400_01": "#e35a40",
@@ -131,7 +134,8 @@ module.exports = {
         gradient4: "linear-gradient(180deg ,#fc2f007f,#fc2f0000)",
         gradient5: "linear-gradient(180deg, rgba(255, 255, 255, 0.75) 54.69%, rgba(255, 255, 255, 0.00) 100%)",
         gradient6: "linear-gradient(180deg, rgba(252, 47, 0, 0.25) 9.90%, #9381FF 86.46%)",
-        gradient7: "linear-gradient(180deg, rgba(250, 18, 54, 0.75) 9.90%, #9381FF 86.46%)"
+        gradient7: "linear-gradient(180deg, rgba(250, 18, 54, 0.75) 9.90%, #9381FF 86.46%)",
+        gradient8: "linear-gradient(180deg, rgba(250, 18, 54, 0.50) 26.36%, rgba(17, 17, 17, 0.50) 100%)",
       },
       transitionProperty: {
           height: 'height'

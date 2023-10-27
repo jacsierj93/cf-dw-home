@@ -24,10 +24,11 @@ type C1HomeDesktopNavbarProps = Omit<
       to: '/cabinas',
       subItems: listCabins.map((cabin)=> {return {item:`${cabin.name} - USD ${cabin.price}`,to:cabin.slug}})
     },
-    // {
-    //   item:'Home',
-    //   tags: ['']
-    // },
+    {
+      item:'Line Up',
+      tags: ['lineup'],
+      to: '/lineup'
+    },
     // {
     //   item:'Home',
     //   tags: ['']
@@ -70,10 +71,10 @@ const C1HomeDesktopNavbar: React.FC<C1HomeDesktopNavbarProps> = (props) => {
                     ))
                   ):''
               }
-            
+
             </div>
-            
-          
+
+
           ))
         }
       </div>
