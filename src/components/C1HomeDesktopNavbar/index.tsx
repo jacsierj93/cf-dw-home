@@ -29,10 +29,11 @@ type C1HomeDesktopNavbarProps = Omit<
       tags: ['lineup'],
       to: '/lineup'
     },
-    // {
-    //   item:'Home',
-    //   tags: ['']
-    // }
+    {
+      item:'Embajadores & Sponsors',
+      tags: ['sponsors'],
+      to: '/sponsors'
+    }
   ]
 
 const C1HomeDesktopNavbar: React.FC<C1HomeDesktopNavbarProps> = (props) => {
@@ -43,7 +44,7 @@ const C1HomeDesktopNavbar: React.FC<C1HomeDesktopNavbarProps> = (props) => {
       <div className={props.className}>
         {
           menuItems.map((item)=>(
-            <div className="flex flex-col justify-start items-start h-[28px] overflow-hidden  bg-[#111111] hover:h-auto px-[16px] rounded-b-lg pb-[8px] mobile:items-center gap-[8px]">
+            <div className={`flex flex-col justify-start items-start h-[28px] overflow-hidden  bg-[#111111] hover:h-auto px-[16px] rounded-b-lg pb-[8px] mobile:items-center gap-[8px] ${(item.item === 'Line Up')?'ml-[-350px]':''} mobile:ml-0`}>
               <div>
                 <Text
                   className={`text-lg text-gray-50  w-auto ${(item.tags.indexOf(fullLocation[1])>=0)?'text-lime-A700':''}`}

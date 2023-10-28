@@ -1,6 +1,9 @@
 import React from "react";
 
 const sizeClasses = {
+  txtClashGroteskVariableBold24: "font-bold font-clashgroteskvariable",
+  txtClashDisplayVariableSemiBold22IndigoA100:
+    "font-clashdisplayvariable font-semibold",
   txtClashDisplayVariableMedium18: "font-clashdisplayvariable font-medium",
   txtClashDisplayVariableMedium16: "font-clashdisplayvariable font-medium",
   txtInterRegular16Bluegray300: "font-inter font-normal",
@@ -8,6 +11,7 @@ const sizeClasses = {
   txtClashGroteskVariableBold28: "font-bold font-clashgroteskvariable",
   txtClashDisplayVariableMedium16WhiteA700:
     "font-clashdisplayvariable font-medium",
+  txtClashGroteskVariableBold18LimeA700: "font-bold font-clashgroteskvariable",
   txtClashGroteskVariableBold18: "font-bold font-clashgroteskvariable",
   txtTankerRegular150: "font-normal font-tanker",
   txtInterSemiBold16: "font-inter font-semibold",
@@ -49,6 +53,7 @@ const sizeClasses = {
   txtMontserratSemiBold24: "font-montserrat font-semibold",
   txtClashDisplayVariableMedium16Gray5001:
     "font-clashdisplayvariable font-medium",
+  txtClashGroteskVariableBold20: "font-bold font-clashgroteskvariable",
   txtClashGroteskVariableMedium16: "font-clashgroteskvariable font-medium",
   txtClashDisplayVariableMedium16Gray50:
     "font-clashdisplayvariable font-medium",

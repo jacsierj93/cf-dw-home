@@ -12,6 +12,7 @@ const HomeDesktop = React.lazy(() => {
 const Cabins = React.lazy(() => import("pages/Cabins"));
 const CabinDetail = React.lazy(() => import("pages/CabinDetail"));
 const LineUp = React.lazy(() => import("pages/LineUp"));
+const Sponsors = React.lazy(() => import("pages/Sponsors"));
 const ProjectRoutes = () => {
   return (
     <React.Suspense fallback={<><div className="absolute top-0 left-0 w-full h-full bg-gradient6 flex justify-center items-center"> <Img className="h-[95px] tablet:h-[55px] animate-pulse" src="/images/img_logocruisefestivalmesa.png" alt="logocruisefesti_One"/></div></>}>
@@ -22,6 +23,7 @@ const ProjectRoutes = () => {
           <Route path="/cabinas" element={<Cabins />}/>
           <Route path="/cabina/:slug" element={<CabinDetail />} />
           <Route path="/lineup" element={<LineUp />} />
+          <Route path="/sponsors" element={<Sponsors />} />
         </Routes>
       </Router>
     </React.Suspense>

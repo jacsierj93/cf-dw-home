@@ -20,7 +20,7 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
   return (
     <>
       <div
-        className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto lg:p-[150px] tablet:p-10 mobile:p-5 w-full"
+        className="relative bg-cover bg-no-repeat bottom-[0] flex flex-col h-full inset-x-[0] items-center justify-center max-w-[1387px] mx-auto p-[150px] tablet:p-10 mobile:p-5 w-full"
         style={{ backgroundImage: (props.background.type != 'image')?"url('/images/img_imgcentral.png')":`url('${props.background.sources[0].source}')` }}
       >
         {
@@ -32,12 +32,12 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
                     <source src={value.source} type={value.format}/>
                   ))
                 }
-                
+
                 Your browser does not support the video tag.
               </video>
           </div>: ''
         }
-       
+
         <div className="bg-gray-900_7f flex flex-col gap-8 items-center justify-center p-12 tablet:px-10 mobile:px-5 rounded-[10px] w-auto tablet:w-full z-10">
           {props?.spantext}
           {
@@ -50,7 +50,7 @@ const C1HomeDesktopImgcentral: React.FC<C1HomeDesktopImgcentralProps> = (
               </Text>)
             :props?.description
           }
-        
+
         </div>
           {
             (props.buttontext)?
